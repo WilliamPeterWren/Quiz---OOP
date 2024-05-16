@@ -1,0 +1,2020 @@
+80 Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+class One {
+    int i = 1;
+    public int getInt() {
+        return i;
+    }
+}
+ 
+class Two extends One {
+    int i = 2;
+    public int getInt() {
+        return i;
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        One one = new One();
+        Two two = (Two) one;
+        System.out.println (two.getInt());
+    }
+}
+Đáp án:
+A. 1
+B. 2
+C. Lỗi biên dịch
+D. Lỗi thực thi
+d
+D. Lỗi thực thi
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+class One {
+    public static void print() {
+        System.out.println ("1");
+    }
+}
+ 
+class Two extends One {
+    public static void print() {
+        System.out.println ("2");
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        One one = new Two();
+        one.print();
+    }
+}
+Đáp án:
+A. 1
+B. 2
+C. Lỗi biên dịch
+D. Lỗi thực thi
+a
+A. 1
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gi?
+class One {
+    public static void print (int i) {
+        System.out.println ("Parent");
+    }
+}
+ 
+class Two extends One {
+    public static void print (byte b) {
+        System.out.println ("Child");
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        One one = new Two();
+        one.print(10);
+    }
+}
+Đáp án:
+A. Parent
+B. Child
+C. Lỗi biên dịch
+D. Lỗi thực thi
+a
+A. Parent
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?
+class One {
+    public static void tool (int i) {
+        System.out.println ("No");
+    }
+}
+ 
+class Two extends One {
+    public static void tool (byte b) {
+        System.out.println ("Ok");
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        One one = new Two();
+        one.tool(5);
+    }
+}
+Đáp án:
+A. Ok
+B. No
+C. Lỗi biên dịch
+D. Lỗi thực thi
+b
+B. No
+Cho chương trình viết bằng ngôn ngữ Java như sau, Lựa chọn nào được viết ở dòng //your code here, khi biên dịch sẽ không có lỗi?
+interface Inter {
+}
+ 
+class One {
+}
+ 
+class Two extends One {
+}
+ 
+class Three extends One {
+}
+ 
+class Four extends Two implements Inter {
+}
+ 
+class Five extends Four {
+}
+ 
+class Six extends Three {
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        // your code here
+    }
+}
+Đáp án:
+A. Inter inter = new Four():
+B. Inter inter = new Inter();
+C. Six six = new Three ();
+D. Three three = new One();
+a
+A. Inter inter = new Four():
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?
+class One {
+}
+ 
+class Two extends One {
+    public void print() {
+        System.out.println ("Two");
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        One one = new Two();
+        one.print();
+    }
+}
+Đáp án:
+A. Two
+B. Lỗi biên dịch
+C. Lỗi thực thì
+D. Cả 3 đáp án đều sai
+b
+B. Lỗi biên dịch
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì
+class One {
+    int x = 0;
+    public One (int x) {
+        this. x = x++;
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        One one = new One(5);
+        System.out.println (one.x);
+    }
+}
+Đáp án:
+A. 1
+B. 0
+C. 6
+D. 5
+d
+D. 5
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?
+class One {
+    public One (int x) {
+        System.out.print ("int constructor");
+    }
+ 
+    public One (long l) {
+        System.out.print ("long constructor");
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        long l = 201;
+        One one = new One(l);
+    }
+}
+Đáp án:
+A. int constructor
+B. long constructor int constructor
+C. long constructor long constructor
+D. long constructor
+d
+D. long constructor
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?
+class One {
+    public One (int x) {
+        System.out.print ("int constructor");
+    }
+ 
+    public One (char c) {
+        System.out.print ("char constructor");
+    }
+ 
+    void One (String str) {
+        System.out.print ("String constructor");
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        String ch = "c";
+        One one = new One(1);
+    }
+}
+Đáp án:
+A. char constructor
+B. int constructor
+C. Lỗi biên dịch
+D. Cả 3 đáp án đều sai
+b
+B. int constructor
+Khi bạn biên dịch và chạy chương trinh viết bằng ngôn ngữ Java bằng lệnh đã cho ở bên dưới sau kết quả sẽ là:
+interface ITestInterface {
+    int status = 0;
+}
+ 
+public class Test implements ITestInterface {
+    public static void main (String[] args) {
+        Test t = new Test();
+        t.status = 69;
+        System.out.print (t.status);
+    }
+}
+Đáp án:
+A. 1
+B. 0
+C. 2
+D. Lỗi biên dịch
+d
+D. Lỗi biên dịch
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+interface ITestInterface {
+    int i = 0;
+ 
+    public ITestInterface() {
+        System.out.print ("I Constructor ");
+    }
+}
+ 
+public class Test implements ITestInterface {
+    public Test() {
+        System.out.print ("Test Constructor ");
+    }
+ 
+    public static void main (String[] args) {
+        Test t = new Test();
+    }
+}
+Đáp án:
+A. Test Constructor
+B. I Constructor Test Constructor
+C. T Constructor I Constructor
+D. Lỗi biên dịch
+d
+D. Lỗi biên dịch
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+class One {
+    public void greetings() {
+        System.out.println ("Hello");
+    }
+}
+ 
+class Two extends One {
+    public void greetings() {
+        System.out.println ("Hi");
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        One one = new Two();
+        one.greetings();
+    }
+}
+Đáp án:
+A. Hello
+B. Hi
+C. Lỗi biên dịch
+D. Lỗi thực thi
+b
+B. Hi
+Cho chương trinh viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+class One {
+    public One() {
+        System.out.println ("Hello Object");
+    }
+ 
+    public One (int x) {
+        this();
+        System.out.println ("Hello Object with int");
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        One one = new One();
+    }
+}
+Đáp án:
+A. Hello Object with int
+B. Hello Object
+C. Hello Object with int Hello Object
+D. Hello Object Hello Object with int
+b
+B. Hello Object
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+class One {
+    public One (int i) {
+        System.out.println ("int");
+    }
+ 
+    public void One (short s) {
+        System.out.println ("short");
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        short s = 10;
+        One one = new One(s);
+    }
+}
+Đáp án:
+A. int short
+B. short
+C. int
+D. short int
+c
+C. int
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?
+class One {
+    public void className() {
+        System.out.println ("Parent");
+    }
+}
+ 
+class Two extends One {
+    public void className() {
+        System.out.println ("Child");
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        One one = new Two();
+        one.className();
+    }
+}
+Đáp án:
+A. Parent
+B. Child Parent
+C. Parent Child
+D. Child
+d
+D. Child
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?
+class One {
+    public void greetings() {
+        System.out.println ("Hello");
+    }
+}
+ 
+class Two extends One {
+    public void greetings() {
+        System.out.println ("Hi");
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        One one = new Two();
+        one.greetings();
+    }
+}
+Đáp án:
+A. Hello
+B. Hello Hi
+C. Hi Hello
+D. Hi
+d
+D. Hi
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+class One {
+    public static void greetings() {
+        System.out.println ("Hello");
+    }
+}
+ 
+class Two extends One {
+    public static void greetings() {
+        System.out.println ("Hi");
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        One one = new Two();
+        one.greetings();
+    }
+}
+Đáp án:
+A. Hello
+B. Hi
+C. Lỗi biên dịch
+D. Lỗi thực thi
+a
+A. Hello
+Cho chương trinh viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+class One {
+    private void className() {
+        System.out.println ("Parent");
+    }
+}
+ 
+class Two extends One {
+    public void className() {
+        System.out.println ("Child");
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        One one = new Two();
+        one.className();
+    }
+}
+Đáp án:
+A. Parent
+B. Child
+C. Lỗi biên dịch
+D. Lỗi thực thi
+c
+C. Lỗi biên dịch
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+class One {
+    private void callMe() {
+        System.out.println ("Parent");
+    }
+ 
+    public void caller() {
+        callMe();
+    }
+}
+ 
+class Two extends One {
+    public void callMe() {
+        System.out.println ("Child");
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        Two two = new Two();
+        two.caller();
+    }
+}
+Đáp án:
+A. Parent
+B. Child
+C. Parent Child
+D. Lỗi biên dịch
+a
+A. Parent
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+class One {
+    public void callMe() {
+        System.out.println ("Parent");
+    }
+ 
+    public void caller() {
+        callMe();
+    }
+}
+ 
+class Two extends One {
+    public void callMe() {
+        System.out.println ("Child");
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        Two two = new Two();
+        two.caller();
+    }
+}
+Đáp án:
+A. Parent
+B. Child
+C. Lỗi thực thi
+D. Lỗi biên dịch
+b
+B. Child
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+class One {
+    public int method() {
+        System.out.println ("int");
+        return 0;
+    }
+}
+ 
+class Two extends One {
+    public int method() {
+        System.out.println ("short");
+        return 1;
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        One one = new Two();
+        one.method();
+    }
+}
+Đáp án:
+A. int
+B. short
+C. Lỗi biên dịch
+D. Lỗi thực thi
+b
+B. short
+Cho chương trinh viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?
+class One {
+    public void someMethod() throws Exception {
+        System.out.println ("Exception");
+    }
+}
+ 
+class Two extends One {
+    public void someMethod() {
+        System.out.println ("Not Exception");
+    }
+ 
+    public static void main (String[] args) {
+        One one = new Two();
+        one.someMethod();
+    }
+}
+Đáp án:
+A. Exception
+B. Not Exception
+C. Lỗi biên dịch
+D. Lỗi thực thi
+c
+C. Lỗi biên dịch
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+class One {
+    public One() {
+        System.out.print ("One.");
+    }
+}
+ 
+class Two extends One {
+    void Two() {
+        System.out.print ("Two.");
+    }
+}
+ 
+class Three extends Two {
+    public Three() {
+        System.out.print ("Three.");
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        Three three = new Three();
+    }
+}
+ 
+Đáp án:
+A. One, Two, Three,
+B. Three, Two, One,
+C. One, Three,
+D. One,
+c
+C. One, Three,
+Cho chương trình viết bằng ngôn ngữ Java như sau, Lựa chọn nào nếu được viết ở dòng //method declaration here
+sẽ được gọi là nạp chồng (override ) phương thức someMethod được định nghĩa trong lớp One
+class One {
+    public void someMethod (int i) {
+    }
+}
+ 
+class Two extends One {
+    public void someMethod (double anotherint) {
+ 
+    }
+    // method declaration here
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        Two two = new Two();
+    }
+}
+ 
+Đáp án:
+A. void public someMethod (int i)
+B. public void someMethod (int anotherint)
+C. public void someMethod(String str)
+D. public void someMethod (double anotherint)
+b
+B. public void someMethod (int anotherint)
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?
+class One {
+    void One() {
+        System.out.print ("One,");
+    }
+}
+ 
+class Two extends One {
+    void Two() {
+        System.out.print ("Two.");
+    }
+}
+ 
+class Three extends Two {
+    void Three() {
+        System.out.print ("Three.");
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        Three three = new Three();
+    }
+}
+Đáp án:
+A. One, Two, Three,
+B. Three, Two, One,
+C. Three,
+D. Cả 3 đáp án đều sai
+d
+D. Cả 3 đáp án đều sai
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+public class Test {
+    int i = 68;
+ 
+    public static void main (String[] args) {
+        System.out.println (i++);
+    }
+}
+Đáp án:
+A. 69
+B. 68
+C. Lỗi biên dịch
+D. Cả 3 đáp án đều sai
+c
+C. Lỗi biên dịch
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?
+abstract class Tesst {
+    public void something() {
+        System.out.println ("Something");
+    }
+ 
+    abstract public void nothing();
+}
+ 
+class TestChild extends Tesst {
+    @Override
+    public void nothing() {
+        System.out.println ("Nothing");
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        TestChild testChild = new TestChild();
+        testChild.something();
+    }
+}
+Đáp án:
+A. Nothing
+B. Something
+C. Lỗi biên dịch
+D. Lỗi thực thi
+b
+B. Something
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+public class Test {
+    String name = "Test";
+ 
+    public Test() {
+        name = "TestObject";
+    }
+ 
+    public static void main (String[] args) {
+        System.out.println ("Name is " + name);
+    }
+}
+Đáp án:
+A. Name is Test
+B. Name is TestObject
+C. Lỗi biên dịch
+D. Cả 3 đáp án đều sai
+c
+C. Lỗi biên dịch
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?
+public class Test {
+    static String name = "Test";
+ 
+    public Test() {
+        name = "TestObject";
+    }
+ 
+    public static void main (String[] args) {
+        System.out.println ("Name is " + name);
+    }
+}
+Đáp án:
+A. Name is Test
+B. Name is TestObject
+C. Lỗi biên dịch
+D. Cả 3 đáp án đều sai
+a
+A. Name is Test
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+class One {
+    public One() {
+        System.out.println ("Abstract Class");
+    }
+ 
+    abstract void nothing();
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        One one = new One();
+    }
+}
+ 
+Đáp án:
+A. Abstract Class
+B. Lỗi biên dịch
+C. Lỗi thực thi
+D. Cả 3 đáp án đều sai
+b
+B. Lỗi biên dịch
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+abstract class One {
+    public One() {
+        System.out.println ("One");
+    }
+ 
+    abstract void nothing();
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        One one = new One();
+    }
+}
+Đáp án:
+A. One
+B. Lỗi biên dịch
+C. Lỗi thực thi
+D. Cả 3 đáp án đều sai
+b
+B. Lỗi biên dịch
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?
+class One {
+    public One (String name) {
+        System.out.print ("Hello" + name + ".");
+    }
+}
+ 
+class Two extends One {
+    public Two() {
+        super ("Alice");
+        System.out.print ("Hi,");
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        Two two = new Two();
+    }
+}
+Đáp án:
+A. Hi
+B. Alice
+C. Hello Alice, Hi
+D. Cả 3 đáp án đều sai
+c
+C. Hello Alice, Hi
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?
+class One {
+    public One (String name) {
+        System.out.print ("Hello" + name + ",");
+    }
+}
+ 
+class Two extends One {
+    public Two() {
+        System.out.print ("Hi,");
+        super ("Two");
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        Two two = new Two();
+    }
+}
+Đáp án:
+A. Hi,
+B. Hi Hello Two,
+C. Lỗi biên dịch
+D. Cả 3 đáp án đều sai
+c
+C. Lỗi biên dịch
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?
+class One {
+    public One (String name) {
+        System.out.print ("Hello" + name + ",");
+    }
+}
+ 
+class Two extends One {
+    public Two() {
+        super ("Two");
+        System.out.print ("Hi,");
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        Two two = new Two();
+    }
+}
+Đáp án:
+A. Hi,
+B. Hi Hello Two,
+C. Hello Two,Hi,
+D. Cả 3 đáp án đều sai
+c
+C. Hello Two,Hi,
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+class One {
+    public One (String name) {
+        System.out.print ("Hello" + name + ".");
+    }
+}
+ 
+class Two extends One {
+    public Two() {
+        this ("Two");
+        System.out.print ("Hi,");
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        Two two = new Two();
+    }
+}
+Đáp án:
+A. Cả 3 dáp án đều sai
+B. Hello
+C. Lỗi biên dịch
+D. Lỗi thực thi
+c
+C. Lỗi biên dịch
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+class One {
+    public One() {
+        System.out.print ("Hi One,");
+    }
+ 
+    public One (String name) {
+        System.out.print ("Hello" + name + ",");
+    }
+}
+ 
+class Two extends One {
+    public Two() {
+        this ("Two");
+        System.out.print ("Hi Two,");
+    }
+ 
+    public Two (String name) {
+        System.out.print ("Hello" + name + ".");
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        Two two = new Two();
+    }
+}
+Đáp án:
+A. Hi One,
+B. Hi Two,
+C. Hi One, Hello Two
+D. Hi One, Hello Two, Hi Two,
+d
+D. Hi One, Hello Two, Hi Two,
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+class One {
+    public One() {
+        System.out.print ("Parent ");
+    }
+}
+ 
+class Two extends One {
+    public Two() {
+        System.out.print ("Child ");
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        One one = new Two();
+    }
+}
+Đáp án:
+A. Parent Child
+B. Child Parent
+C. Child
+D. Parent
+a
+A. Parent Child
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?
+class TestChild extends Test {
+    public TestChild() {
+        System.out.println ("TestChild1 ");
+    }
+}
+ 
+public class Test {
+    void TestChild() {
+        System.out.println ("TestChild2 ");
+    }
+ 
+    public static void main (String[] args) {
+        new Test().TestChild();
+    }
+}
+Đáp án:
+A. TestChildl TestChild2
+B. TestChild2 TestChildl
+C. Test Child2
+D. Cả 3 đáp án đều sai
+c
+C. Test Child2
+Cho chương trinh viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?
+public class Test {
+    int i = 68;
+ 
+    void print() {
+        System.out.println (i);
+    }
+ 
+    public static void main (String[] args) {
+        new Test().print();
+    }
+}
+Đáp án:
+A. 0
+B. 68
+C. Lỗi thực thi
+D. Lỗi biên dịch
+b
+B. 68
+Cho chương trinh viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+final class One {
+    public void sayHello() {
+        System.out.println ("Parent Hello");
+    }
+}
+ 
+class Two extends One {
+    public void sayHello() {
+        System.out.println ("Child Hello");
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        One o = new Two();
+        o.sayHello();
+    }
+}
+ 
+Đáp án:
+A. Parent Hello
+B. Child Hello
+C. Lỗi biên dịch
+D. Cả 3 đáp án đều sai
+c
+C. Lỗi biên dịch
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+public class Test {
+    public int count (int i) {
+        return 0;
+    }
+ 
+    public long count (long i) {
+        return 0L;
+    }
+ 
+    public static void main (String[] args) {
+        Test test = new Test();
+ 
+        int resultInt = test.count(5);
+        long resultLong = test.count(6);
+ 
+        System.out.print (resultInt);
+        System.out.print (resultLong);
+    }
+}
+Đáp án:
+A. 5
+B. 6
+C. 0
+D. 00
+d
+D. 00
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+public class Test {
+    public static void main (String[] args) {
+        One o = new Two();
+        o.sayHello();
+    }
+}
+ 
+class One {
+    public void sayHello() {
+        System.out.println ("Parent Hello");
+    }
+}
+ 
+class Two extends One {
+    public void sayHello() {
+        System.out.println ("Child Hello");
+    }
+}
+ 
+Đáp án:
+A. Parent Hello
+B. Child Hello
+C. Lỗi biên dịch
+D. Lỗi thực thi
+b
+B. Child Hello
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+class TestChild extends Test {
+    public int count (int i) {
+        return 1;
+    }
+}
+ 
+public class Test {
+    public int count (int i) {
+        return 0;
+    }
+ 
+    public static void main (String[] args) {
+        Test test = new TestChild();
+        int resultInt = test.count(5);
+        System.out.println ("Result for int: " + resultInt);
+    }
+}
+Đáp án:
+A. Lỗi biên dịch
+B. Lỗi thực thi
+C. Result for int: 0
+D. Result for int: 1
+d
+D. Result for int: 1
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+public class Test {
+    public static void main (String[] args) {
+        One o = new Two();
+        o.sayHello();
+    }
+}
+ 
+class One {
+    public final void sayHello() {
+        System.out.println ("Parent Hello");
+    }
+}
+ 
+class Two extends One {
+    public void sayHello() {
+        System.out.println ("Child Hello");
+    }
+}
+Đáp án:
+A. Parent Hello
+B. Child Hello
+C. Lỗi biên dịch
+D. Lỗi thực thi
+c
+C. Lỗi biên dịch
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?
+public class Test {
+    public int count (int i) {
+        return 0;
+    }
+ 
+    public int count (double j) {
+        return 1;
+    }
+ 
+    public static void main (String[] args) {
+        Test test = new Test();
+ 
+        int i = test.count(5);
+        int d = test.count(5.0);
+ 
+        System.out.print ("int:" + i);
+        System.out.print (" double: " + d);
+    }
+}
+Đáp án:
+A. int: 0
+B. double: 0
+C. int: 0 double: 0
+D. int: 0 double: 1
+d
+D. int: 0 double: 1
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+class One {
+    private void count (int i) {
+        System.out.println (0);
+    }
+}
+ 
+public class Test extends One {
+    public void count (int j) {
+        System.out.println (1);
+    }
+ 
+    public static void main (String[] args) {
+        One one = new Test();
+        one.count(0);
+    }
+}
+Đáp án:
+A. 1
+B. 0
+C. Lỗi biên dịch
+D. Lỗi thực thi
+c
+C. Lỗi biên dịch
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+public class Test {
+    class TestInner {
+        void sayHi() {
+            System.out.println("Hi");
+        }
+    }
+ 
+    public static void main(String[] args) {
+        TestInner inner = new TestInner();
+        inner.sayHi();
+    }
+}
+Đáp án:
+A. Hi
+B. Lỗi biên dịch
+C. Lỗi thực thi
+D. Cả 3 đáp án đều sai
+b
+B. Lỗi biên dịch
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?
+public class Test {
+    class TestInner {
+        void sayHi() {
+            System.out.println ("Hi");
+        }
+    }
+ 
+    public static void main (String[] args) {
+        Test t = new Test();
+        TestInner inner = t. new TestInner();
+        inner.sayHi();
+    }
+}
+Đáp án:
+A. Hi
+B. Lỗi biển dịch
+C. Lỗi thực thi
+D. Cả 3 đáp án đều sai
+a
+A. Hi
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+public class Test {
+    public void compute (int i, int j) {
+        System.out.println ("int version");
+    }
+ 
+    public void compute (long i, long j) {
+        System.out.println ("long version");
+    }
+ 
+    public static void main (String[] args) {
+        Test t = new Test();
+        t.compute(10, 5);
+    }
+}
+
+Đáp án:
+A. int version
+B. long version
+C. Lỗi biên dịch
+D. Lỗi thực thi
+a
+A. int version
+Cho chương trinh viết bằng ngôn ngữ Java như sau, Lựa chọn nào được viết ở dòng // access variable here, khi biên dịch sẽ không có lỗi?
+public class Test {
+    private int i = 0;
+    int j = 1;
+    public int k = 2;
+ 
+    class TestInner {
+        private int l = 3;
+        int m = 4;
+        public int n = 5;
+ 
+        void sayHi() {
+            // access variable here
+        }
+ 
+        public static void main (String[] args) {
+        }
+    }
+}
+Đáp án:
+A. i = 5;
+B. j = 5;
+C. k = 5;
+D. Cả 3 đáp án đều đúng
+d
+D. Cả 3 đáp án đều đúng
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?
+class One {
+    public static void process() {
+        System.out.print ("Parent");
+    }
+}
+ 
+class Two extends One {
+    public static void process() {
+        super .process();
+        System.out.print ("Child");
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        One one = new Two();
+        one.process();
+    }
+}
+Đáp án:
+A. Parent
+B. Child
+C. Parent Child
+D. Lỗi biên dịch
+d
+D. Lỗi biên dịch
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?
+class One {
+    public void process() {
+        System.out.print ("Parent ");
+    }
+}
+ 
+class Two extends One {
+    public void process() {
+        super .process();
+        System.out.print ("Child");
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        One one = new Two();
+        one.process();
+    }
+}
+Đáp án:
+A. Parent
+B. Child
+C. Parent Child
+D. Lỗi biên dịch
+c
+C. Parent Child
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?
+public class Test {
+    private int i = 0;
+ 
+    class TestInner {
+        public int i = 1;
+ 
+        void sayHi() {
+            System.out.println (i);
+        }
+    }
+ 
+    public static void main (String[] args) {
+        TestInner inner = new Test(). new TestInner();
+        inner.sayHi();
+    }
+}
+Đáp án:
+A. 0
+B. 1
+C. Lỗi biên dịch
+D. Lỗi thực thi
+b
+B. 1
+Cho chương trinh viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gi?
+class One {
+    public One() {
+        System.out.print (" One ");
+    }
+}
+ 
+class Two extends One {
+    public Two() {
+        System.out.print (" Two ");
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        One one = new One();
+        Two two = new Two();
+    }
+}
+Đáp án:
+A. One
+B. Two
+C. One Two
+D. One One Two
+d
+D. One One Two
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?
+interface TestInterface {
+}
+ 
+class TestImplementation implements TestInterface {
+    public TestImplementation() {
+        System.out.println ("TestImplementation");
+    }
+}
+ 
+class Test {
+    public static void main (String[] args) {
+        TestImplementation implementation = new TestImplementation();
+    }
+}
+Đáp án:
+A. TestImplementation
+B. Hello, world!
+C. Lỗi biên dịch
+D. Lỗi thực thi
+a
+A. TestImplementation
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?
+interface TestInterface {
+    void someMethod();
+ 
+    class Test {
+        void display() {
+            System.out.println ("Test class.");
+        }
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        TestInterface. Test testObj = new TestInterface.Test();
+        testObj.display();
+    }
+}
+Đáp án:
+A. Test class.
+B. Hello, world!
+C. Lỗi biên dịch
+D. Lỗi thực thi
+a
+A. Test class.
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?
+class One {
+    public abstract One();
+}
+ 
+class Two extends One {
+    public Two() {
+        System.out.println ("Two");
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        Two two = new Two();
+    }
+}
+Đáp án:
+A. Two
+B. One
+C. Lỗi biên dịch
+D. Lỗi thực thi
+c
+C. Lỗi biên dịch
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?
+interface TestInterface {
+    class Test {
+        void display() {
+            System.out.println ("Test class.");
+        }
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        TestInterface. Test testObj = new TestInterface.Test();
+        testObj.display();
+    }
+}
+Đáp án:
+A. Test class.
+B. Lỗi biên dịch
+C. Lỗi thực thi
+D. Cả 3 đáp án đều sai
+a
+A. Test class.
+Cho chương trinh viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+class One {
+    int i = 1;
+ 
+    public One() {
+        System.out.println (i);
+    }
+}
+ 
+class Two extends One {
+    int i = 10;
+ 
+    public One() {
+        System.out.println (i);
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        One one = new Two();
+    }
+}
+Đáp án:
+A. 1
+B. 10
+C. Lỗi biên dịch
+D. Lỗi thực thi
+c
+C. Lỗi biên dịch
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+class One {
+}
+ 
+class Two extends One {
+}
+ 
+public class Test extends One {
+    public static void main (String[] args) {
+        One one = new One();
+        Two two = new Two();
+        System.out.println (one instanceof Two);
+    }
+}
+Đáp án:
+A. true
+B. false
+C. Cả 3 đáp án đều sai
+D. Lỗi biên dịch
+b
+B. false
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+class One {
+}
+ 
+class Two extends One {
+}
+ 
+public class Test extends One {
+    public static void main (String[] args) {
+        One one = new One();
+        Two two = new Two();
+        System.out.println (one instanceof One);
+    }
+}
+Đáp án:
+A. true
+B. false
+D. Lỗi biên dịch
+C. Cả 3 đáp án đều sai
+a
+A. true
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?
+class One {
+    public One() {
+        System.out.print ("One");
+    }
+}
+ 
+class Two extends One {
+    public Two() {
+        System.out.print ("Two");
+    }
+}
+ 
+class Three {
+    Two two = new Two();
+ 
+    public Three() {
+        System.out.print ("Three");
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        Three three = new Three();
+    }
+}
+Đáp án:
+A. ThreeTwoOne
+B. ThreeOneTwo
+C. OneTwoThree
+D. Cả 3 đáp án đều sai
+c
+C. OneTwoThree
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?
+class TestInner {
+    public void print() {
+        System.out.println ("Hi");
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        TestInner t = new TestInner() {
+            public void print() {
+                System.out.println ("Hello");
+            }
+        };
+        t.print();
+    }
+}
+Đáp án:
+A. Hi
+B. Hello
+C. Lỗi biên dịch
+D. Cả 3 đáp án đều sai
+b
+B. Hello
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+class One {
+    String className = "One";
+}
+ 
+class Two extends One {
+    String className = "Two";
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        One one = new Two();
+        System.out.println (one.className);
+    }
+}
+Đáp án:
+A. One
+B. Two
+C. Lỗi biên dịch
+D. Lỗi thực thi
+a
+A. One
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+class One {
+    public One() {
+        System.out.print ("One");
+    }
+ 
+    public One (String str) {
+        System.out.print ("OneStr");
+    }
+}
+ 
+class Two extends One {
+    public Two (String str) {
+        super();
+        System.out.print ("TwoStr");
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        Two two = new Two("Hello");
+    }
+}
+Đáp án:
+A. OneTwoStrOneStr
+B. TwoStrOneStr
+C. OneTwoStr
+D. Lỗi biên dịch
+c
+C. OneTwoStr
+Cho chương trinh viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+public class Test {
+    public void doNothing (Object object) {
+        System.out.println ("Object");
+    }
+ 
+    public void doNothing (String str) {
+        System.out.println ("String");
+    }
+ 
+    public static void main (String[] args) {
+        Test test = new Test();
+        test.doNothing( args );
+    }
+}
+Đáp án:
+A. String
+B. Object
+C. Cả 3 đáp án đều sai
+D. Lỗi biên dịch
+b
+B. Object
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+public class Test {
+    public void doNothing (Object object) {
+        System.out.println ("Object");
+    }
+ 
+    public void doNothing (Integer i) {
+        System.out.println ("Integer");
+    }
+ 
+    public static void main (String[] args) {
+        Test test = new Test();
+        test.doNothing( null );
+    }
+}
+Đáp án:
+A. Integer
+B. Object
+C. String
+D. Cả 3 đáp án đều sai
+a
+A. Integer
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+public class Test {
+    public void doNothing (Object object) {
+        System.out.println ("Object");
+    }
+ 
+    public void doNothing (Integer i) {
+        System.out.println ("Integer");
+    }
+ 
+    public void doNothing (double d) {
+        System.out.println ("Double");
+    }
+ 
+    public static void main (String[] args) {
+        test.doNothing( new Test() );
+    }
+}
+Đáp án:
+A. Object
+B. Integer
+C. Double
+D. Lỗi biên dịch
+d
+D. Lỗi biên dịch
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gi?
+public class Test {
+    public void doNothing (Object object) {
+        System.out.println ("Object");
+    }
+ 
+    public void doNothing (Integer i) {
+        System.out.println ("Integer");
+    }
+ 
+    public void doNothing (double i) {
+        System.out.println ("Integer");
+    }
+ 
+    public static void main (String[] args) {
+        Test test = new Test();
+        test.doNothing(test);
+    }
+}
+Đáp án:
+A. Integer
+B. Double
+C. Object
+D. Cả 3 đáp án đều sai
+c
+C. Object
+Cho chương trình viết bằng ngôn ngữ Java như sau, Lựa chọn nào được viết ở dòng // variable name here, khi biên dịch sẽ không có lỗi?
+public class Test {
+    private int i = 1;
+    int j = 2;
+ 
+    public void TestMethod() {
+        class TestInner {
+            int k = 3;
+ 
+            public void InnerMethod (int m) {
+                System.out.println ( // variable name here);
+            }
+        }
+    }
+}
+Đáp án:
+A. i
+B. j
+C. k
+D. Cả 3 đáp án đều đúng
+d
+D. Cả 3 đáp án đều đúng
+Cho chương trinh viết bằng ngôn ngữ Java như sau, Lựa chọn nào được viết ở dòng // access variable here khi biên dịch sẽ không có lỗi?
+public class Test {
+    int x = 0;
+    static int y = 1;
+ 
+    static class InnerClass {
+        int z = 2;
+ 
+        public void getValue() {
+            // access variable here
+        }
+    }
+}
+Đáp án:
+A. y = z = 6;
+B. y = 8;
+C. z = 9;
+D. Cả 3 đáp án đều đúng
+d
+D. Cả 3 đáp án đều đúng
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?
+public class Test {
+    public void TestMethod() {
+        final int a = 0;
+        class TestInner {
+            public void InnerMethod (final int x, int y) {
+                System.out.println (y);
+            }
+        }
+ 
+        TestInner inner = new TestInner();
+        inner.InnerMethod(1, 2);
+    }
+ 
+    public static void main (String[] args) {
+        Test main = new Test();
+        main.TestMethod();
+    }
+}
+Đáp án:
+A. 0
+B. 1
+C. 2
+D. Lỗi biên dịch
+c
+C. 2
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+public class Test {
+    public void TestMethod() {
+        class TestInner {
+            int x = 0;
+        }
+        System.out.println (x);
+    }
+ 
+    public static void main (String[] args) {
+        Test test = new Test();
+        test.TestMethod();
+    }
+}
+Đáp án:
+A. 0
+B. Lỗi biên dịch
+C. Lỗi thực thi
+D. Cả 3 đáp án đều sai
+b
+B. Lỗi biên dịch
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+public class Test {
+    public void method1() {
+        class TestInner {
+            public int x = 0;
+        }
+    }
+ 
+    public void method2() {
+        TestInner inner = new TestInner();
+        System.out.println (inner.x);
+    }
+ 
+    public static void main (String[] args) {
+        Test test = new Test();
+        test.method2();
+    }
+}
+Đáp án:
+A. 0
+B. Lỗi biên dịch
+C. Lỗi thực thi
+D. Cả 3 đáp án đều sai
+b
+B. Lỗi biên dịch
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+public class Test {
+    static int i = 0;
+    int j = 1;
+ 
+    public void TestMethod() {
+        final int finalI = i;
+        class TestInner {
+            public void InnerMethod() {
+                System.out.println (finalI);
+            }
+        }
+ 
+        TestInner inner = new TestInner();
+        inner.InnerMethod();
+    }
+ 
+    public static void main (String[] args) {
+        Test test = new Test();
+        test.TestMethod();
+    }
+}
+
+Đáp án:
+A. 0
+B. Lỗi biên dịch
+C. Lỗi thực thi
+D. Cả 3 đáp án đều sai
+a
+A. 0
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gi?
+public class Test {
+    public class TestInner {
+        public void print() {
+            System.out.println ("Hi");
+        }
+    }
+ 
+    public void print() {
+        System.out.println ("Hello");
+    }
+ 
+    public static void main (String[] args) {
+        Test test = new Test();
+        TestInner testInner = test. new TestInner();
+        testInner.print();
+    }
+}
+Đáp án:
+A. Hello
+B. Hi
+C. Lỗi biên dịch
+D. Lỗi thực thi
+b
+B. Hi
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?
+public class Test {
+    public static void main (String[] args) {
+        One o = new One();
+        o.sayHello();
+    }
+}
+ 
+final abstract class One {
+    public final void sayHello() {
+        System.out.println ("Hello");
+    }
+ 
+    public abstract void sayHi();
+}
+Đáp án:
+A. Hello
+B. Lỗi biên dịch
+C. Lỗi thực thi
+D. Cả 3 đáp ản đều sai
+b
+B. Lỗi biên dịch
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?
+class One {
+    String sayHello1 (String name) {
+        return "Hello" + name;
+    }
+ 
+    char[] sayHello2 (String name) {
+        return ("Hello" + name).toCharArray();
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        One one = new One();
+        Object object = one.sayHello2("OCAJP");
+ 
+        if (object instanceof String)
+            System.out.println ("String");
+        else
+            System.out.println ("Array");
+    }
+}
+Đáp án:
+A. Hello OCAJP
+B. String
+С. Аrrау
+D. Lỗi biên dịch
+c
+С. Аrrау
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trinh, có kết quả là gì?
+class One {
+    public void someMethod() throws Exception {
+        System.out.println ("Exception");
+    }
+}
+ 
+class Two extends One {
+    public void someMethod() throws Exception {
+        System.out.println ("Override Exception");
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        One one = new Two();
+ 
+        try {
+            one.someMethod();
+        } catch (Exception e) {
+        }
+    }
+}
+Đáp án:
+A. Exception
+B. Override Exception
+C. Lỗi biên dịch
+D. Lỗi thực thi
+b
+B. Override Exception
+Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?
+class One {
+ 
+    public One() {
+        System.out.print ("One constructor");
+    }
+ 
+    public One (long l) {
+        System.out.print ("One long constructor");
+    }
+}
+ 
+class Two extends One {
+    public Two (int i) {
+        System.out.print ("Two int constructor");
+    }
+ 
+    public Two (long l) {
+        System.out.print ("Two long constructor");
+    }
+}
+ 
+public class Test {
+    public static void main (String[] args) {
+        long value = 68;
+        One one = new Two(value);
+    }
+}
+Đáp án:
+A. Two int constructor
+B. One long constructor
+C. One constructor Two long constructor
+D. One constructor
+c
+C. One constructor Two long constructor
+

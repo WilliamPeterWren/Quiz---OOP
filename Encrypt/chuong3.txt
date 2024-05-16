@@ -1,0 +1,1161 @@
+30 Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class Complex {
+private:
+	double real;
+	double imag;
+ 
+public:
+	Complex (double r, double i) : real(r), imag(i) {}
+ 
+	friend ostream& operator << (ostream& os, const Complex& c) {
+		os << c.real << " + " << c.imag << "i";
+		return os;
+	}
+};
+ 
+int main() {
+	Complex a(3.0, 4.0);
+	cout << "a: " << a << endl;
+ 
+	return 0;
+}
+Đáp án:
+A. 3 + 4i
+B. a: 3 + 4
+C. a: 3 + 4i
+D. 3 + 4
+c
+C. a: 3 + 4i
+Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class Complex {
+private:
+	double real;
+	double imag;
+ 
+public:
+	Complex (double r, double i) : real(r), imag(i) {}
+ 
+	Complex operator + (const Complex & other) const {
+		return Complex (real + other.real, imag + other.imag);
+	}
+ 
+	friend ostream& operator << (ostream& os, const Complex& c) {
+		os << c.real << " + " << c.imag << "i";
+		return os;
+	}
+};
+ 
+int main() {
+	Complex a(3.0, 4.0);
+	Complex b(1.5, 2.5);
+ 
+	Complex e = a + b;
+	cout << "a + b: " << e << endl;
+ 
+	return 0;
+}
+Đáp án:
+A. 4.5 + 6.5i
+B. a + b: 4.5 + 6.5
+C. a + b: 4.5 + 6.5i
+D. 4.5 + 6.5
+c
+C. a + b: 4.5 + 6.5i
+Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class Complex {
+private:
+	double real;
+	double imag;
+ 
+public:
+	Complex (double r, double i) : real(r), imag(i) {}
+ 
+	Complex operator - (const Complex& other) const {
+		return Complex (real - other.real, imag - other.imag);
+	}
+ 
+	friend ostream& operator << (ostream& os, const Complex& c) {
+		os << c.real << "+" << c.imag << "i";
+		return os;
+	}
+};
+ 
+int main() {
+	Complex a(3.0, 4.0);
+	Complex b(1.5, 2.5);
+ 
+	Complex c = a - b;
+	cout << "a - b: " << c << endl;
+ 
+	return 0;
+}
+Đáp án:
+A. 1.5 + 1.5i
+B. a - b: 1.5 + 1.5
+C. a - b: 1.5 + 1.5i
+D. 1.5 + 1.5
+c
+C. a - b: 1.5 + 1.5i
+Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class Complex {
+private:
+	double real;
+	double imag;
+ 
+public:
+	Complex (double r, double i) : real(r), imag(i) {}
+ 
+	Complex operator * (const Complex& other) const {
+		double newReal = real * other.real - imag * other.imag;
+		double newImag = real * other.imag + imag * other.real;
+		return Complex (newReal, newImag);
+	}
+ 
+	friend ostream& operator << (ostream& os, const Complex& c) {
+		os << c.real << " + " << c.imag << "i";
+		return os;
+	}
+};
+ 
+int main() {
+	Complex a(3.0, 4.0);
+	Complex b(1.5, 2.5);
+ 
+	Complex e = a * b;
+	cout << "a * b: " << e << endl;
+ 
+	return 0;
+}
+Đáp án:
+A. - 5.5 + 13.5i
+B. a * b: - 5.5 + 13.5
+C. a * b: - 5.5 + 13.5i
+D. - 5.5 + 13.5
+c
+C. a * b: - 5.5 + 13.5i
+Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class Complex {
+private:
+	double real;
+	double imag;
+ 
+public:
+	Complex (double r, double i) : real(r), imag(i) {}
+ 
+	bool operator == (const Complex& other) const {
+		return (real == other.real) && (imag == other.imag);
+	}
+ 
+	friend ostream& operator << (ostream& os, const Complex& c) {
+		os << c.real << " + " << c.imag << "i";
+		return os;
+	}
+};
+ 
+int main() {
+	Complex a(3.0, 4.0);
+	Complex b(1.5, 2.5);
+ 
+	if (a == b) {
+		cout << "a is equal to b" << endl;
+	}
+	else {
+		cout << "a is not equal to b" << endl;
+	}
+ 
+	return 0;
+}
+Đáp án:
+A. a is not equal to b
+B. a: 3 + 4i
+C. a is equal to b
+D. a: 3 + 4i
+a
+A. a is not equal to b
+Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class Complex {
+private:
+	double real;
+	double imaginary;
+ 
+public:
+	Complex (double r, double i) : real(r), imaginary(i) {}
+ 
+	Complex operator + (const Complex& other) const {
+		return Complex (real + other.real, imaginary + other.imaginary);
+	}
+ 
+	friend ostream& operator << (ostream& os, const Complex& c) {
+		os << c.real << " + " << c.imaginary;
+		return os;
+	}
+};
+ 
+int main() {
+	Complex a(2.5, 3.0);
+	Complex b(1.5, 2.0);
+ 
+	Complex result = a + b;
+	cout << "Result: " << result << endl;
+ 
+	return 0;
+}
+Đáp án:
+A. Result: 4 + 5
+B. Result: 2.5 + 3.0
+C. Result: 1.5 + 2.0
+D. 4 + 5
+a
+A. Result: 4 + 5
+Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class Rectangle {
+private:
+	double width;
+	double height;
+ 
+public:
+	Rectangle (double w, double h) : width(w), height(h) {}
+ 
+	double getWidth() const {
+		return width;
+	}
+ 
+	double getHeight() const {
+		return height;
+	}
+ 
+	double area() const {
+		return width * height;
+	}
+ 
+	Rectangle operator + (const Rectangle& other) {
+		double newWidth = width + other.width;
+		double newHeight = height + other.height;
+		return Rectangle (newWidth, newHeight);
+	}
+ 
+	void display() const {
+		cout << "Width: " << width << ", Height: " << height << endl;
+	}
+};
+ 
+int main() {
+	Rectangle r1(4.0, 5.0);
+	Rectangle r2(3.0, 2.0);
+ 
+	Rectangle r3 = r1 + r2;
+	r3.display();
+ 
+	return 0;
+}
+Đáp án:
+A. Width: 7, Height: 7
+B. Width: 4.0, Height: 5.0
+C. Width: 3.0, Height: 2.0
+D. Width: 1.0, Height: 3.0
+a
+A. Width: 7, Height: 7
+Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class Point {
+private:
+	int x, y;
+ 
+public:
+	void Print() {
+		cout << "(" << x << "," << y << ")";
+	}
+ 
+	Point (int a = 0, int b = 0) : x(a), y(b) {}
+ 
+	Point (int t) {
+		x = y = t;
+	}
+ 
+	friend Point operator + (Point, Point);
+};
+ 
+Point operator + (Point p1, Point p2){
+	return Point (p1.x + p2.x, p1.y + p2.y);
+}
+ 
+void main() {
+	Point p1(3, 4);
+	Point p = p1 + 3;
+	p.Print();	
+}
+Đáp án:
+A. Lỗi biên dịch
+B. Lỗi thực thi
+C. Kết quả là (6,7)
+D. Kết quả là (6,4)
+a
+A. Lỗi biên dịch
+Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class Point {
+private:
+	int x, y;
+ 
+public:
+	void Print() {
+		cout << "(" << x << "," << y << ")";
+	}
+ 
+	Point (int a = 0, int b = 0) : x(a), y(b) {}
+ 
+	Point (int t) {
+		x = y = t;
+	}
+ 
+	friend Point operator + (Point, Point);
+};
+ 
+Point operator + (Point p1, Point p2){
+	return Point (p1.x + p2.x, p1.y + p2.y);
+}
+ 
+void main() {
+	Point p1(3, 4), p2(2, 6);
+	Point p = p1 + p2;
+	p.Print();
+}
+Đáp án:
+A. Kết quả là (5,10)
+B. Lỗi biên dịch
+C. Lỗi thực thi
+D. Kết quả là (5,4)
+a
+A. Kết quả là (5,10)
+Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class Test {
+public:
+	Test() {
+		cout << "A";
+	}
+ 
+	Test (const Test& t){
+		cout << "B";
+	}
+ 
+	void operator = (const Test& t) {
+		cout << "C";
+	}
+};
+ 
+void main() {
+	Test t1;
+	Test t2;
+	t2 = t1;
+}
+Đáp án:
+A. Kết quả là : AAC
+B. Kết quả là : ABC
+C. Kết quả là : AAB
+D. Là một kết quả khác
+a
+A. Kết quả là : AAC
+Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class Count {
+private:
+	int value;
+ 
+public:
+	Count() : value(5) {}
+ 
+	void operator ++ () {
+		++value;
+	}
+ 
+	void display() {
+		cout << value << endl;
+	}
+};
+ 
+int main() {
+	Count count;
+ 
+	++count;
+	count.display();
+ 
+	return 0;
+}
+Đáp án:
+A. 5
+B. 6
+C. Lỗi thực thi
+D. Lỗi biên dịch
+b
+B. 6
+Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class Count {
+private:
+	int value;
+ 
+public:
+	Count() : value(5) {}
+ 
+	void operator ++ () {
+		++value;
+	}
+ 
+	void display() {
+		cout << value << endl;
+	}
+};
+ 
+int main() {
+	Count count;
+ 
+	count++;
+	count.display();
+ 
+	return 0;
+}
+Đáp án:
+A. 5
+B. 6
+C. Lỗi thực thi
+D. Lỗi biên dịch
+d
+D. Lỗi biên dịch
+Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class Count {
+private:
+	int value;
+ 
+public:
+	Count() : value(5) {}
+ 
+	void operator ++ (int) {
+		value++;
+	}
+ 
+	void display() {
+		cout << value << endl;
+	}
+};
+ 
+int main() {
+	Count count;
+ 
+	count++;
+	count.display();
+ 
+	return 0;
+}
+Đáp án:
+A. 5
+B. 6
+C. Lỗi thực thi
+D. Lỗi biên dịch
+b
+B. 6
+Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class Count {
+private:
+	int value;
+ 
+public:
+	Count() : value(4) {}
+ 
+	Count operator ++ () {
+		Count temp;
+		temp.value = ++value;
+		return temp;
+	}
+ 
+	Count operator ++ (int) {
+		Count temp;
+		temp.value = value++;
+		return temp;
+	}
+ 
+	void display() {
+		cout << value << endl;
+	}
+};
+ 
+int main() {
+	Count count, result;
+ 
+	result = ++count;
+	result.display();
+ 
+	return 0;
+}
+Đáp án:
+A. 5
+B. 6
+C. Lỗi thực thi
+D. Lỗi biên dịch
+a
+A. 5
+Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class Box {
+public:
+	double getVolume(void) {
+		return length * breadth * height;
+	}
+ 
+	void setLength (double len) {
+		length = len;
+	}
+ 
+	void setBreadth (double bre) {
+		breadth = bre;
+	}
+ 
+	void setHeight (double hei) {
+		height = hei;
+	}
+ 
+	Box operator + (const Box& b) {
+		Box box;
+		box.length = this->length + b.length;
+		box.breadth = this->breadth + b.breadth;
+		box.height = this->height + b.height;
+		return box;
+	}
+ 
+private:
+	double length;
+	double breadth;
+	double height;
+};
+ 
+int main() {
+	Box Box1;
+	Box Box2;
+	Box Box3;
+ 
+	double volume = 0.0;
+ 
+	Box1.setLength(1.0);
+	Box1.setBreadth(2.0);
+	Box1.setHeight(3.0);
+ 
+	Box2.setLength(2.0);
+	Box2.setBreadth(3.0);
+	Box2.setHeight(4.0);
+ 
+	volume = Box1.getVolume();
+	volume = Box2.getVolume();
+ 
+	Box3 = Box1 + Box2;
+	volume = Box3.getVolume();
+	cout << volume << endl;
+   
+	return 0;
+}
+Đáp án:
+A. 101
+B. 102
+C. 103
+D. 105
+d
+D. 105
+Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class Distance {
+private:
+    int feet;
+    int inches;
+ 
+public:
+    Distance() {
+        feet = 0;
+        inches = 0;
+    }
+ 
+    Distance (int f, int i) {
+        feet = f;
+        inches = i;
+    }
+ 
+    void operator = (const Distance& D) {
+        feet = D.feet;
+        inches = D.inches;
+    }
+ 
+    void displayDistance() {
+        cout << "F: " << feet << " I: " << inches << endl;
+    }
+};
+ 
+int main() {
+    Distance D1(11, 10), D2(5, 11);
+ 
+    D1 = D2;
+    D1.displayDistance();
+ 
+    return 0;
+}
+Đáp án:
+A. F:11 I:10
+B. F:5 I:11
+C. F:16 I:21
+D. F:11 I:5
+b
+B. F:5 I:11
+Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class TestClass {
+private:
+    int count;
+ 
+public:
+    TestClass() : count(5) {}
+ 
+    void operator -- () {
+        count = count - 3;
+    }
+ 
+    void display() {
+        cout << count;
+    }
+};
+ 
+int main() {
+    TestClass tc;
+ 
+    --tc;
+    tc.display();
+ 
+    return 0;
+}
+Đáp án:
+A. 5
+B. 3
+C. 2
+D. 15
+c
+C. 2
+Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class OperatorOverload {
+private:
+    int x;
+ 
+public:
+    OperatorOverload() : x(10) {}
+ 
+    void operator ++ () {
+        x = x + 2;
+    }
+ 
+    void print() {
+        cout << x;
+    }
+};
+ 
+int main() {
+    OperatorOverload ov;
+ 
+    ++ov;
+    ov.print();
+ 
+    return 0;
+}
+Đáp án:
+A. 10
+B. 3
+C. 2
+D. 12
+d
+D. 12
+Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class TestClass {
+private:
+    int real, over;
+ 
+public:
+    TestClass (int rl = 0, int ov = 0) {
+        real = rl;
+        over = ov;
+    }
+ 
+    TestClass operator + (const TestClass& obj) {
+        TestClass result;
+        result.real = real + obj.real;
+        result.over = over + obj.over;
+        return result;
+    }
+ 
+    void print() {
+        cout << real << " + " << over << endl;
+    }
+};
+ 
+int main() {
+    TestClass c1(9, 5), c2(4, 3);
+    TestClass c3 = c1 + c2;
+ 
+    c3.print();
+ 
+    return 0;
+}
+Đáp án:
+A. 9 + 5
+B. 4 + 3
+C. 13 + 8
+D. 9 + 5 + 4 + 3
+c
+C. 13 + 8
+Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class Frac {
+private:
+    int a;
+    int b;
+ 
+public:
+    Frac() : a(6), b(8) {}
+ 
+    Frac operator * (const Frac& obj) {
+        Frac temp;
+        temp.a = a * obj.a;
+        temp.b = b * obj.b;
+        return temp;
+    }
+ 
+    void out() {
+        cout << a << "/" << b;
+    }
+};
+ 
+int main() {
+    Frac F1, F2, result;
+ 
+    result = F1 * F2;
+    result.out();
+ 
+    return 0;
+}
+Đáp án:
+A. 6/8
+B. 36/64
+C. 8/6
+D. Lỗi biên dịch
+b
+B. 36/64
+Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class OverLoad {
+private:
+    int a;
+    int b;
+ 
+public:
+    OverLoad() : a(6), b(8) {}
+ 
+    void operator -- () {
+        a = --a;
+        b = --b;
+    }
+ 
+    void out() {
+        cout << a << " and " << b;
+    }
+};
+ 
+int main() {
+    OverLoad obj;
+ 
+    --obj;
+    obj.out();
+ 
+    return 0;
+}
+Đáp án:
+A. 5 and 7
+B. 6 and 8
+C. 8 and 6
+D. Lỗi biên dịch
+a
+A. 5 and 7
+Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+const int SIZE = 5;
+class Array {
+private:
+    int arr[SIZE];
+ 
+public:
+    Array (int a[]) {
+        for (int i = 0; i < SIZE; i++) {
+            arr[i] = i;
+        }
+    }
+ 
+    int& operator [] (int i) {
+        if (i >= SIZE) {
+            return arr[0];
+        }
+        return arr[i];
+    }
+};
+ 
+int main() {
+    int a[] = { 6, 8, 9, 7, 2 };
+    Array arr(a);
+    cout << "A[3]: " << arr[3] << endl;
+ 
+    return 0;
+}
+Đáp án:
+A. A[3]: 7
+B. A[3]: 3
+C. A[3]: 6
+D. Lỗi biên dịch
+b
+B. A[3]: 3
+Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+const int SIZE = 5;
+class Array {
+private:
+    int arr[SIZE];
+ 
+public:
+    Array (int a[]) {
+        for (int i = 0; i < SIZE; i++)
+            arr[i] = a[i];
+    }
+ 
+    int& operator [] (int i) {
+        if (i >= SIZE) {
+            return arr[0];
+        }
+        return arr[i];
+    }
+};
+ 
+int main() {
+    int a[] = { 6, 8, 9, 7, 2 };
+    Array arr(a);
+    cout << "A[3]: " << arr[3] << endl;
+ 
+    return 0;
+}
+Đáp án:
+A. A[3]: 7
+B. A[3]: 3
+C. A[3]: 6
+D. Lỗi biên dịch
+a
+A. A[3]: 7
+Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+const int SIZE = 5;
+class Array {
+private:
+    int arr[SIZE];
+ 
+public:
+    Array (int a[]) {
+        for (int i = 0; i < SIZE; i++) {
+            arr[i] = a[i];
+        }
+    }
+};
+ 
+int main() {
+    int a[] = { 6, 8, 9, 7, 2 };
+    Array arr(a);
+    cout << "A[3]: " << arr[3] << endl;
+ 
+    return 0;
+}
+Đáp án:
+A. A[3]: 7
+B. A[3]: 3
+C. A[3]: 6
+D. Lỗi biên dịch
+d
+D. Lỗi biên dịch
+Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class OverLoad {
+private:
+    int a;
+    int b;
+ 
+public:
+    OverLoad() : a(6), b(8) {}
+    void out() {
+        cout << a << " and " << b;
+    }
+};
+ 
+int main() {
+    OverLoad obj;
+ 
+    --obj;
+    obj.out();
+ 
+    return 0;
+}
+Đáp án:
+A. 5 and 7
+B. 6 and 8
+C. 8 and 6
+D. Lỗi biên dịch
+d
+D. Lỗi biên dịch
+Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class Rectangle {
+private:
+    int width, height;
+ 
+public:
+    Rectangle (int, int);
+    int area();
+};
+ 
+Rectangle:: Rectangle (int width, int height) {
+    this->width = width;
+    this->height = height;
+}
+ 
+int Rectangle:: area() {
+    return width * height;
+}
+ 
+int main() {
+    Rectangle recta(3, 4);
+    Rectangle rectb(5, 6);
+ 
+    int rectc = recta + rectb;
+    cout << "rectc area: " << rectc << endl;
+ 
+    return 0;
+}
+Đáp án:
+A. rectc area: 80
+B. recte area: 12
+C. recte area: 30
+D. Lỗi biên dịch do lớp Rectangle không có toán từ +
+d
+D. Lỗi biên dịch do lớp Rectangle không có toán từ +
+Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class Rectangle {
+private:
+    int width, height;
+ 
+public:
+    Rectangle (int, int);
+    int area() const;
+    const Rectangle operator + (const Rectangle& rec);
+};
+ 
+Rectangle:: Rectangle (int width, int height) {
+    this->width = width;
+    this->height = height;
+}
+ 
+int Rectangle:: area() const {
+    return width * height;
+}
+ 
+const Rectangle Rectangle:: operator + (const Rectangle& rec) {
+    this->width += rec.width;
+    this->height += rec.height;
+    return *this;
+}
+ 
+int main() {
+    Rectangle recta(3, 4);
+    Rectangle rectb(5, 6);
+ 
+    Rectangle rectc = recta + rectb;
+    cout << "rectc area: " << rectc.area() << endl;
+ 
+    return 0;
+}
+Đáp án:
+A. rectc area: 80
+B. recte area: 12
+C. rectc area: 30
+D. Lỗi biên dịch do lớp Rectangle không có toán tử +
+a
+A. rectc area: 80
+Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class Rectangle {
+private:
+    int width, height;
+ 
+public:
+    Rectangle();
+    Rectangle (int w, int h);
+    Rectangle (const Rectangle& m);
+ 
+    Rectangle& operator = (const Rectangle& m);
+    Rectangle operator * (const Rectangle& m) const;
+ 
+    void print() const;
+};
+ 
+Rectangle:: Rectangle() {
+    width = 0;
+    height = 0;
+}
+ 
+Rectangle:: Rectangle(int w, int h) {
+    width = w;
+    height = h;
+}
+ 
+Rectangle:: Rectangle(const Rectangle& m) {
+    width = m.width;
+    height = m.height;
+}
+ 
+Rectangle& Rectangle:: operator = (const Rectangle& m) {
+    this->width = m.width;
+    this->height = m.height;
+    return *this;
+}
+ 
+Rectangle Rectangle:: operator * (const Rectangle& m) const {
+    Rectangle result;
+    result.width = this->width * m.width;
+    result.height = this->height * m.height;
+    return result;
+}
+ 
+void Rectangle:: print() const {
+    cout << "Width: " << width << " Height: " << height << endl;
+}
+ 
+int main() {
+    Rectangle m(3, 2);
+    Rectangle n(5, 3);
+ 
+    Rectangle x = m * n;
+    x.print();
+ 
+    return 0;
+}
+Đáp án:
+A. Width: 15...Height: 6
+B. Width: 5...Height: 3
+C. Width: 3...Height: 2
+D. Lỗi biên dịch lỗi do truy cập đến thành phần private của lớp Rectangle
+a
+A. Width: 15...Height: 6
+Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class Rectangle {
+private:
+    int width, height;
+ 
+public:
+    Rectangle();
+    Rectangle (int w, int h);
+    Rectangle (const Rectangle& m);
+ 
+    Rectangle& operator = (const Rectangle& m);
+ 
+    void print() const;
+};
+ 
+Rectangle:: Rectangle() {
+    width = 0;
+    height = 0;
+}
+ 
+Rectangle:: Rectangle (int w, int h) {
+    width = w;
+    height = h;
+}
+ 
+Rectangle:: Rectangle (const Rectangle& m) {
+    width = m.width;
+    height = m.height;
+}
+ 
+Rectangle& Rectangle:: operator = (const Rectangle& m) {
+    this->width = m.width;
+    this->height = m.height;
+    return *this;
+}
+ 
+void Rectangle:: print() const {
+    cout << "Width: " << width << " Height: " << height << endl;
+}
+ 
+int main() {
+    Rectangle m(3, 2);
+    Rectangle n(5, 3);
+ 
+    Rectangle x = m;
+    x = m * n;
+    x.print();
+ 
+    return 0;
+}
+Đáp án:
+A. Width: 15... Height:6
+B. Width:5...Height:3
+C. Width:3...Height:2
+D. Lỗi biên dịch do lớp Rectangle không có toán từ *
+d
+D. Lỗi biên dịch do lớp Rectangle không có toán từ *
+Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class Point {
+private:
+    int xVal;
+    int yVal;
+ 
+public:
+    Point (int x = 0, int y = 0) : xVal(x), yVal(y) {}
+ 
+    Point (int x) {
+        xVal = yVal = x;
+    }
+ 
+    void Print() {
+        cout << "(" << xVal << "," << yVal << ")";
+    }
+ 
+    friend Point operator + (Point p1, Point p2);
+};
+ 
+Point operator + (Point p1, Point p2) {
+    return Point (p1.xVal + p2.xVal, p1.yVal + p2.yVal);
+}
+ 
+int main() {
+    Point p1(3, 4);
+    Point p = p1 + 3;
+    p.Print();
+ 
+    return 0;
+}
+Đáp án:
+A. Lỗi biên dịch do operator + chưa nạp chồng
+B. (6,7)
+C. (6,4)
+D. (3,7)
+a
+A. Lỗi biên dịch do operator + chưa nạp chồng
+

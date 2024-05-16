@@ -1,0 +1,2811 @@
+87 Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+    int i = 1;
+ 
+    public int GetInt()
+    {
+        return i;
+    }
+}
+ 
+class Two : One
+{
+    int i = 2;
+ 
+    public int GetInt()
+    {
+        return i;
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        One one = new One();
+        Two two = new Two();
+ 
+        Console.WriteLine (two.GetInt());
+    }
+}
+Đáp án:
+A. 1
+B. 2
+C. Lỗi biên dịch
+D. Lỗi thực thi
+b
+B. 2
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+    public void Print()
+    {
+        Console.WriteLine ("1");
+    }
+}
+ 
+class Two : One
+{
+    public void Print()
+    {
+        Console.WriteLine ("2");
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        Two one = new Two();
+        one.Print();
+    }
+}
+Đáp án:
+A. 1
+B. 2
+C. Lỗi biên dịch
+D. Lỗi thực thi
+b
+B. 2
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+    public void Print (int i)
+    {
+        Console.WriteLine ("Parent");
+    }
+}
+ 
+class Two : One
+{
+    public void Print (byte b)
+    {
+        Console.WriteLine ("Child");
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        Two one = new Two();
+        one.Print(10);
+    }
+}
+Đáp án:
+A. Parent
+B. Child
+C. Lỗi biên dịch
+D. Lỗi thực thi
+b
+B. Child
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+    public void Tool (int i)
+    {
+        Console.WriteLine ("No");
+    }
+}
+ 
+class Two : One
+{
+    public void Tool (byte b)
+    {
+        Console.WriteLine ("Ok");
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        One one = new Two();
+        one.Tool(10);
+    }
+}
+Đáp án:
+A. No
+B. Ok
+C. Lỗi biên dịch
+D. Lỗi thực thi
+a
+A. No
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+public class One
+{
+    public static void Tool (int i)
+    {
+        Console.WriteLine ("No");
+    }
+}
+ 
+public class Two : One
+{
+    public static void Tool (byte b)
+    {
+        Console.WriteLine ("Ok");
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        One one = new Two();
+        One.Tool(5);
+    }
+}
+Đáp án:
+A. Ok
+B. No
+C. Lỗi biên dịch
+D. Lỗi thực thi
+b
+B. No
+Cho chương trình viết bằng ngôn ngữ C# như sau, Những lựa chọn nào nếu được viết ở dòng // your code here, khi biên dịch sẽ không có bất kỳ lỗi nào?
+ 
+interface Inter
+{
+}
+ 
+class One
+{
+}
+ 
+class Two : One
+{
+}
+ 
+class Three : One
+{
+}
+ 
+class Four : Two, Inter
+{
+}
+ 
+class Five : Four
+{
+}
+ 
+class Six : Three
+{
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        // your code here
+    }
+}
+Đáp án:
+A. Inter inter = new Four();
+B. Inter inter = new Two();
+C. Five inter = new Three();
+D. Inter inter = new One();
+a
+A. Inter inter = new Four();
+Cho chương trình viết bằng ngôn ngữ C# như sau, Những lựa chọn nào nếu được viết ở dòng // your code here, khi biên dịch sẽ không có bất kỳ lỗi nào?
+ 
+interface Inter
+{
+}
+ 
+class One
+{
+}
+ 
+class Two : One
+{
+}
+ 
+class Three : One
+{
+}
+ 
+class Four : Two, Inter
+{
+}
+ 
+class Five : Four
+{
+}
+ 
+class Six : Three
+{
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        // your code here
+    }
+}
+Đáp án:
+A. Inter inter = new Four();
+B. Inter inter = new Inter ();
+C. Six six = new Three ();
+D. Three three = new One();
+a
+A. Inter inter = new Four();
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+}
+ 
+class Two : One
+{
+    public void Print()
+    {
+        Console.WriteLine ("Two");
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        Two one = new Two();
+        one.Print();
+    }
+}
+Đáp án:
+A. Two
+B. Lỗi biên dịch
+C. Lỗi thực thi
+D. Cả 3 đáp án đều sai
+a
+A. Two
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+    int x = 10;
+ 
+    public One (int x)
+    {
+        this. x = x++;
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        One one = new One(20);
+        Console.WriteLine (one.x);
+    }
+}
+Đáp án:
+A. 1
+B. 0
+C. 6
+D. Lỗi biên dịch
+d
+D. Lỗi biên dịch
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+    public One (int x)
+    {
+        Console.WriteLine ("int constructor");
+    }
+ 
+    public One (long l)
+    {
+        Console.WriteLine ("long constructor");
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        long l = 201;
+        One one = new One(l);
+    }
+}
+Đáp án:
+A. int constructor
+B. long constructor int constructor
+C. long constructor long constructor
+D. long constructor
+d
+D. long constructor
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+    public One()
+    {
+        Console.WriteLine ("One constructor");
+    }
+ 
+    public One (long l)
+    {
+        Console.WriteLine ("One long constructor");
+    }
+}
+class Two : One
+{
+    public Two (int i)
+    {
+        Console.WriteLine ("Two int constructor");
+    }
+ 
+    public Two (long l)
+    {
+        Console.WriteLine ("Two long constructor");
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        long value = 68;
+        One one = new Two(value);
+    }
+}
+Đáp án:
+A. Two int constructor
+B. One long constructor
+C. One constructor - Two long constructor
+D. One constructor
+c
+C. One constructor - Two long constructor
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+    public One (int x)
+    {
+        Console.WriteLine ("int constructor");
+    }
+ 
+    public One (char c)
+    {
+        Console.WriteLine ("char constructor");
+    }
+ 
+    void Two (string str)
+    {
+        Console.WriteLine ("String method");
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        string ch = "c";
+        One one = new One(1);
+    }
+}
+Đáp án:
+A. char constructor
+B. int constructor
+C. Lỗi biên dịch
+D. Không có kết quả đúng
+b
+B. int constructor
+Khi bạn biên dịch và chạy chương trình viết bằng ngôn ngữ C# bằng lệnh đã cho ở bên dưới sau kết quả sẽ là:
+interface ITestInterface
+{
+    int status = 0;
+}
+ 
+public class Test : ITestInterface
+{
+    public static void Main (string[] args)
+    {
+        Test t = new Test();
+        t.status = 69;
+        Console.WriteLine (t.status);
+    }
+}
+Đáp án:
+A. 1
+B. 0
+C. 2
+D. Lỗi biên dịch
+d
+D. Lỗi biên dịch
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+public class ITestInterface
+{
+    int i = 0;
+ 
+    public ITestInterface()
+    {
+        Console.WriteLine ("I Constructor");
+    }
+}
+ 
+public class Test : ITestInterface
+{
+    public Test()
+    {
+        Console.WriteLine ("Test Constructor ");
+    }
+ 
+    public static void Main (string[] args)
+    {
+        Test t = new Test();
+    }
+}
+Đáp án:
+A. Test Constructor
+B. I Constructor Test Constructor
+C. T Constructor I Constructor
+D. Lỗi biên dịch
+b
+B. I Constructor Test Constructor
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+    string SayHello1 (string name)
+    {
+        return "Hello " + name;
+    }
+ 
+    char[] SayHello2 (string name)
+    {
+        return ("Hello " + name).ToCharArray();
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        One one = new One();
+        Object[] ob = one.SayHello2("Haha");
+ 
+        if (ob instance string)
+        {
+            Console.WriteLine ("String");
+        }
+        else
+        {
+            Console.WriteLine ("Array");
+        }
+    }
+}
+Đáp án:
+A. Hello OCAJP
+B. String
+C. Array
+D. Lỗi biên dịch
+d
+D. Lỗi biên dịch
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+    public void Greetings()
+    {
+        Console.WriteLine ("Hello");
+    }
+}
+ 
+class Two : One
+{
+    public void Greetings()
+    {
+        Console.WriteLine ("Hi");
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        One one = new Two();
+        one.Greetings();
+    }
+}
+Đáp án:
+A. Hello
+B. Hi
+C. Lỗi biên dịch
+D. Lỗi thực thi
+a
+A. Hello
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+    public One()
+    {
+        Console.WriteLine ("Hello Object");
+    }
+ 
+    public One (int x)
+    {
+        Console.WriteLine ("Hello Object with int");
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        One one = new One();
+    }
+}
+Đáp án:
+A. Hello Object with int
+B. Hello Object
+C. Hello Object with int Hello Object
+D. Hello Object Hello Object with int
+b
+B. Hello Object
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+    public One (int i)
+    {
+        Console.WriteLine ("int");
+    }
+ 
+    public One (short s)
+    {
+        Console.WriteLine ("short");
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        short s = 10;
+        One one = new One(s);
+    }
+}
+Đáp án:
+A. int short
+B. short
+C. int
+D. short int
+b
+B. short
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+    public void ClassName()
+    {
+        Console.WriteLine ("Parent");
+    }
+}
+ 
+class Two : One
+{
+    public void ClassName()
+    {
+        Console.WriteLine ("Child");
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        One one = new Two();
+        one.ClassName();
+    }
+}
+Đáp án:
+A. Parent
+B. Child Parent
+C. Parent Child
+D. Child
+a
+A. Parent
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+    public void Greetings()
+    {
+        Console.WriteLine ("Hello");
+    }
+}
+ 
+class Two : One
+{
+    public void Greetings()
+    {
+        Console.WriteLine ("Hi");
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        Two one = new Two();
+        one.Greetings();
+    }
+}
+Đáp án:
+A. Hello
+B. Hello Hi
+C. Hi Hello
+D. Hi
+d
+D. Hi
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+    public void Greetings()
+    {
+        Console.WriteLine ("Hello");
+    }
+}
+ 
+class Two : One
+{
+    public void Greetings()
+    {
+        Console.WriteLine ("Hi");
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        One one = new One();
+        one.Greetings();
+    }
+}
+Đáp án:
+A. Hello
+B. Hi
+C. Lỗi biên dịch
+D. Lỗi thực thi
+a
+A. Hello
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+    public void ClassName()
+    {
+        Console.WriteLine ("Parent");
+    }
+}
+ 
+class Two : One
+{
+    public void ClassName()
+    {
+        Console.WriteLine ("Child");
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        One one = new Two();
+        one.ClassName();
+    }
+}
+Đáp án:
+A. Parent
+B. Child
+C. Lỗi biên dịch
+D. Lỗi thực thi
+a
+A. Parent
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+    private void CallMe()
+    {
+        Console.WriteLine ("Parent");
+    }
+ 
+    public void Caller()
+    {
+        CallMe();
+    }
+}
+ 
+class Two : One
+{
+    public void CallMe()
+    {
+        Console.WriteLine ("Child");
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        Two two = new Two();
+        two.Caller();
+    }
+}
+Đáp án:
+A. Parent
+B. Child
+C. Parent Child
+D. Lỗi biên dịch
+a
+A. Parent
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+    public int Method()
+    {
+        Console.WriteLine ("int");
+        return 0;
+    }
+}
+ 
+class Two : One
+{
+    public int Method()
+    {
+        Console.WriteLine ("short");
+        return 1;
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        One one = new Two();
+        one.Method();
+    }
+}
+Đáp án:
+A. int
+B. short
+C. Lỗi biên dịch
+D. Lỗi thực thi
+a
+A. int
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+    public void SomeMethod()
+    {
+        Console.WriteLine ("Exception");
+    }
+}
+ 
+class Two : One
+{
+    public void SomeMethod()
+    {
+        Console.WriteLine ("Not Exception");
+    }
+ 
+    public static void Main (string[] args)
+    {
+        One one = new Two();
+        one.SomeMethod();
+    }
+}
+Đáp án:
+A. Exception
+B. Not Exception
+C. Lỗi biên dịch
+D. Lỗi thực thi
+a
+A. Exception
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+    public void SomeMethod()
+    {
+        Console.WriteLine ("Exception");
+    }
+}
+ 
+class Two : One
+{
+    public void SomeMethod()
+    {
+        Console.WriteLine ("Override Exception");
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        Two one = new Two();
+ 
+        try
+        {
+            one.SomeMethod();
+        }
+        catch (Exception e)
+        {
+        }
+    }
+}
+Đáp án:
+A. Exception
+B. Override Exception
+C. Lỗi biên dịch
+D. Lỗi thực thi
+b
+B. Override Exception
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+    public One()
+    {
+        Console.WriteLine ("One,");
+    }
+}
+ 
+class Two : One
+{
+    void Four()
+    {
+        Console.WriteLine ("Two,");
+    }
+}
+ 
+class Three : Two
+{
+    public Three()
+    {
+        Console.WriteLine ("Three,");
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        Three three = new Three();
+    }
+}
+Đáp án:
+A. One, Two, Three,
+B. Three, Two, One,
+C. One, Three,
+D. Lỗi biên dịch
+c
+C. One, Three,
+Cho chương trình viết bằng ngôn ngữ C# như sau, Lựa chọn nào nếu được viết ở dòng // method declaration here, sẽ được gọi là nạp chồng (override) phương thức someMethod được định nghĩa trong lớp One
+ 
+class One
+{
+    public void SomeMethod (int i)
+    {
+    }
+}
+ 
+class Two : One
+{
+    public void SomeMethod (double anotherint)
+    {
+    }
+    // method declaration here
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        Two two = new Two();
+    }
+}
+Đáp án:
+A. void public someMethod (int i) {}
+B. public void someMethod (int anotherint){}
+C. public void Somemethod (string str){}
+D. public void someMethod (double anotherint) {}
+b
+B. public void someMethod (int anotherint){}
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+    void Two()
+    {
+        Console.WriteLine ("One,");
+    }
+}
+ 
+class Two : One
+{
+    void One()
+    {
+        Console.WriteLine ("Two,");
+    }
+}
+ 
+class Three : Two
+{
+    public void Four()
+    {
+        Console.WriteLine ("Three,");
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        Three three = new Three();
+        three.Four();
+    }
+}
+Đáp án:
+A. One, Two, Three,
+B. Three, Two, One,
+C. Three,
+D. Không có kết quả đúng
+c
+C. Three,
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        int i = 68;
+        Console.WriteLine (++i);
+    }
+}
+Đáp án:
+A. 69
+B. 68
+C. Lỗi biên dịch
+D. Không có kết quả đúng
+a
+A. 69
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+abstract class Tesst
+{
+    public void Something()
+    {
+        Console.WriteLine ("Something");
+    }
+ 
+    public void NoThing();
+}
+ 
+class TestChild : Tesst
+{
+    public void NoThing()
+    {
+        Console.WriteLine ("Nothing");
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        TestChild testChild = new TestChild();
+        testChild.Something();
+    }
+}
+Đáp án:
+A. Nothing
+B. Something
+C. Lỗi biên dịch
+D. Lỗi thực thi
+c
+C. Lỗi biên dịch
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+public class Test
+{
+    String name = "Test";
+ 
+    public Test()
+    {
+        name = "TestObject";
+    }
+ 
+    public static void Main (string[] args)
+    {
+        Test test = new Test();
+        Console.WriteLine ("Name is " + test.name);
+    }
+}
+Đáp án:
+A. Name is Test
+B. Name is TestObject
+C. Lỗi biên dịch
+D. Không có kết quả đúng
+b
+B. Name is TestObject
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+public class Test
+{
+    static String name = "Test";
+ 
+    public Test()
+    {
+        name = "TestObject";
+    }
+ 
+    public static void Main (string[] args)
+    {
+        Console.WriteLine ("Name is " + name);
+    }
+}
+Đáp án:
+A. Name is Test
+B. Name is TestObject
+C. Lỗi biên dịch
+D. Không có kết quả đúng
+a
+A. Name is Test
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+public class One
+{
+    public One()
+    {
+        Console.WriteLine ("Abstract Class");
+    }
+ 
+    abstract void Nothing();
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        One one = new One();
+    }
+}
+Đáp án:
+A. Abstract Class
+B. Lỗi biên dịch
+C. Lỗi thực thi
+D. Không có kết quả đúng
+b
+B. Lỗi biên dịch
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+public class One
+{
+    public One()
+    {
+        Console.WriteLine ("One");
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        One one = new One();
+    }
+}
+Đáp án:
+A. One
+B. Lỗi biên dịch
+C. Lỗi thực thi
+D. Không có kết quả đúng
+a
+A. One
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+    public One (string name)
+    {
+        Console.WriteLine ("Hello " + name + ",");
+    }
+}
+ 
+class Two : One
+{
+    public Two() : base ("Alice")
+    {
+        Console.WriteLine ("Hi,");
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        Two two = new Two();
+    }
+}
+Đáp án:
+A. Hi,
+B. Alice
+C. Hello Alice, Hi,
+D. Không có kết quả đúng
+c
+C. Hello Alice, Hi,
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+    public One (string name)
+    {
+        Console.WriteLine ("Hello " + name + ",");
+    }
+}
+ 
+class Two : One
+{
+    public Two() : base ("Two")
+    {
+        Console.WriteLine ("Hi,");
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        Two two = new Two();
+    }
+}
+Đáp án:
+A. Hi,
+B. Hello Two, Hi,
+C. Lỗi biên dịch
+D. Không có kết quả đúng
+b
+B. Hello Two, Hi,
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+public class One
+{
+    public One (string name)
+    {
+        Console.WriteLine ("Hello " + name + ",");
+    }
+}
+ 
+class Two : One
+{
+    public Two() : base ("Two")
+    {
+        Console.WriteLine ("Hi,");
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        Two two = new Two();
+    }
+}
+Đáp án:
+A. Hi,
+B. Hi, Hello Two,
+C. Hello Two, Hi,
+D. Không có kết quả đúng
+c
+C. Hello Two, Hi,
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+    public One (string name)
+    {
+        Console.WriteLine ("Hello " + name + ",");
+    }
+}
+ 
+class Two : One
+{
+    public Two() : base ("Two")
+    {
+        Console.WriteLine ("Hi,");
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        One two = new One();
+    }
+}
+Đáp án:
+A. Không có kết quả đúng
+B. Hello
+C. Lỗi biên dịch
+D. Lỗi thực thi
+c
+C. Lỗi biên dịch
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+    public One()
+    {
+        Console.WriteLine ("Parent ");
+    }
+}
+ 
+class Two : One
+{
+    public Two()
+    {
+        Console.WriteLine ("Child ");
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        One one = new Two();
+    }
+}
+Đáp án:
+A. Parent Child
+B. Child Parent
+C. Child
+D. Parent
+a
+A. Parent Child
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+public class TestChild : Test
+{
+    public TestChild()
+    {
+        Console.WriteLine ("TestChild1 ");
+    }
+}
+ 
+public class Test
+{
+    void TestChild()
+    {
+        Console.WriteLine ("TestChild2 ");
+    }
+ 
+    public static void Main (string[] args)
+    {
+        new Test().TestChild();
+    }
+}
+Đáp án:
+A. TestChild1 TestChild2
+B. TestChild2 TestChild1
+C. TestChild2
+D. Không có kết quả đúng
+c
+C. TestChild2
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+public class Test
+{
+    int i = 68;
+ 
+    void Print()
+    {
+        Console.WriteLine (i);
+    }
+ 
+    public static void Main (string[] args)
+    {
+        new Test().Print();
+    }
+}
+Đáp án:
+A. 0
+B. 68
+C. Lỗi thực thi
+D. Lỗi biên dịch
+b
+B. 68
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+public class One
+{
+    public void SayHello()
+    {
+        Console.WriteLine ("Parent Hello");
+    }
+}
+ 
+class Two : One
+{
+    public void SayHello()
+    {
+        Console.WriteLine ("Child Hello");
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        One o = new Two();
+        o.SayHello();
+    }
+}
+Đáp án:
+A. Parent Hello
+B. Child Hello
+C. Lỗi biên dịch
+D. Không có kết quả đúng
+a
+A. Parent Hello
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+public class Test
+{
+    public int Count (int i)
+    {
+        return 0;
+    }
+ 
+    public long Count (long i)
+    {
+        return 0L;
+    }
+ 
+    public static void Main (string[] args)
+    {
+        Test test = new Test();
+ 
+        int resultInt = test.Count(5);
+        long resultLong = test.Count(6);
+ 
+        Console.WriteLine (resultInt);
+        Console.WriteLine (resultLong);
+    }
+}
+Đáp án:
+A. 5
+B. 6
+C. 0
+D. 00
+d
+D. 00
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gi?
+ 
+public class TestChild : Test
+{
+    public int Count (int i)
+    {
+        return 1;
+    }
+}
+ 
+public class Test
+{
+    public int Count (int i)
+    {
+        return 0;
+    }
+ 
+    public static void Main (string[] args)
+    {
+        Test test = new TestChild();
+ 
+        int resultInt = test.Count(5);
+        Console.WriteLine ("Result for int: " + resultInt);
+    }
+}
+Đáp án:
+A. Lỗi biên dịch
+B. Lỗi thực thi
+C. Result for int: 0
+D. Result for int: 1
+c
+C. Result for int: 0
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        One o = new Two();
+        o.SayHello();
+    }
+}
+ 
+class One
+{
+    public void SayHello()
+    {
+        Console.WriteLine ("Parent Hello");
+    }
+}
+ 
+class Two : One
+{
+    public void SayHello()
+    {
+        Console.WriteLine ("Child Hello");
+    }
+}
+Đáp án:
+A. Parent Hello
+B. Child Hello
+C. Lỗi biên dịch
+D. Lỗi thực thi
+a
+A. Parent Hello
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+public class Test
+{
+    public int Count (int i)
+    {
+        return 0;
+    }
+ 
+    public int Count (double j)
+    {
+        return 1;
+    }
+ 
+    public static void Main (string[] args)
+    {
+        Test test = new Test();
+ 
+        int i = test.Count(5);
+        int d = test.Count(5.0);
+ 
+        Console.WriteLine ("int: " + i);
+        Console.WriteLine ("double: " + d);
+    }
+}
+Đáp án:
+A. int: 0
+B. double: 0
+C. int: 0 double: 0
+D. int: 0 double: 1
+d
+D. int: 0 double: 1
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+public class One
+{
+    public void Count (int i)
+    {
+        Console.WriteLine (0);
+    }
+}
+ 
+public class Test : One
+{
+    public void Count (int j)
+    {
+        Console.WriteLine (1);
+    }
+ 
+    public static void Main (string[] args)
+    {
+        One one = new Test();
+        one.Count(0);
+    }
+}
+Đáp án:
+A. 1
+B. 0
+C. Lỗi biên dịch
+D. Lỗi thực thi
+b
+B. 0
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        One o = new One();
+        o.SayHello();
+    }
+}
+ 
+public class One
+{
+    public void SayHello()
+    {
+        Console.WriteLine ("Hello");
+    }
+}
+Đáp án:
+A. Hello
+B. Lỗi biên dịch
+C. Lỗi thực thi
+D. Không có kết quả đúng
+a
+A. Hello
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+public class Test
+{
+    class TestInner
+    {
+        public void SayHi()
+        {
+            Console.WriteLine ("Hi");
+        }
+    }
+ 
+    public static void Main (string[] args)
+    {
+        TestInner inner = new TestInner();
+        inner.SayHi();
+    }
+}
+Đáp án:
+A. Hi
+B. Lỗi biên dịch
+C. Lỗi thực thi
+D. Không có kết quả đúng
+a
+A. Hi
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+public class Test
+{
+    class TestInner
+    {
+        public void SayHi()
+        {
+            Console.WriteLine ("Hi");
+        }
+    }
+ 
+    public static void Main (string[] args)
+    {
+        Test t = new Test();
+    }
+}
+Đáp án:
+A. Hi
+B. Lỗi biên dịch
+C. Lỗi thực thi
+D. Không có kết quả đúng
+d
+D. Không có kết quả đúng
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+public class Test
+{
+    public void Compute (int i, int j)
+    {
+        Console.WriteLine ("int version");
+    }
+ 
+    public void Compute (long i, long j)
+    {
+        Console.WriteLine ("long version");
+    }
+ 
+    public static void Main (string[] args)
+    {
+        Test t = new Test();
+        t.Compute(10, 5);
+    }
+}
+Đáp án:
+A. int version
+B. long version
+C. Lỗi biên dịch
+D. Lỗi thực thi
+a
+A. int version
+Cho chương trình viết bằng ngôn ngữ C# như sau, Những lựa chọn nào nếu được viết ở dòng //access variable here, khi biên dịch sẽ không có bất kỳ lỗi nào?
+ 
+public class Test
+{
+    private int i = 0;
+    int j = 1;
+    public int k = 2;
+ 
+    public class TestInner
+    {
+        private int l = 3;
+        private int m = 4;
+        public int n = 5;
+ 
+        void SayHi()
+        {
+            //access variable here
+        }
+    }
+ 
+    public static void Main (string[] args)
+    {
+    }
+}
+Đáp án:
+A. i  = 5;
+B. j = 5;
+C. k = 5;
+D. Tất cả đều sai
+d
+D. Tất cả đều sai
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+    public void Process()
+    {
+        Console.WriteLine ("Parent ");
+    }
+}
+ 
+class Two : One
+{
+    public static void Process()
+    {
+        Console.WriteLine ("Child");
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        One one = new Two();
+        one.Process();
+    }
+}
+Đáp án:
+A. Parent
+B. Child
+C. Parent Child
+D. Lỗi biên dịch
+a
+A. Parent
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+public class Test
+{
+    private int i = 0;
+ 
+    class TestInner
+    {
+        public int i = 1;
+ 
+        public void SayHi()
+        {
+            Console.WriteLine (i);
+        }
+    }
+ 
+    public static void Main (string[] args)
+    {
+        TestInner inner = new TestInner();
+        inner.SayHi();
+    }
+}
+Đáp án:
+A. 0
+B. 1
+C. Lỗi biên dịch
+D. Lỗi thực thi
+b
+B. 1
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+    public One()
+    {
+        Console.WriteLine (" One ");
+    }
+}
+ 
+class Two : One
+{
+    public Two()
+    {
+        Console.WriteLine (" Two ");
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        One one = new One();
+        Two two = new Two();
+    }
+}
+Đáp án:
+A. One
+B. Two
+C. One Two
+D. One One Two
+d
+D. One One Two
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+interface TestInterface
+{
+}
+ 
+class TestImplementation : TestInterface
+{
+    public TestImplementation()
+    {
+        Console.WriteLine ("TestImplementation");
+    }
+}
+ 
+class Test
+{
+    public static void Main (string[] args)
+    {
+        TestImplementation implementation = new TestImplementation();
+    }
+}
+Đáp án:
+A. TestImplementation
+B. Hello, world!
+C. Lỗi biên dịch
+D. Lỗi thực thi
+a
+A. TestImplementation
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+interface TestInterface
+{
+    void SomeMethod();
+ 
+    class Test
+    {
+        public void Display()
+        {
+            Console.WriteLine ("Test class.");
+        }
+    }
+}
+ 
+class Test
+{
+    public static void Main (string[] args)
+    {
+        TestInterface.Test testObj = new TestInterface.Test();
+        testObj.Display();
+    }
+}
+Đáp án:
+A. Test class.
+B. Hello, world!
+C. Lỗi biên dịch
+D. Lỗi thực thi
+a
+A. Test class.
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+    public abstract One();
+}
+ 
+class Two : One
+{
+    public Two()
+    {
+        Console.WriteLine ("Two");
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        Two two = new Two();
+    }
+}
+Đáp án:
+A. Two
+B. One
+C. Lỗi biên dịch
+D. Lỗi thực thi
+c
+C. Lỗi biên dịch
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class TestInterface
+{
+    public class Test
+    {
+        public void Display()
+        {
+            Console.WriteLine ("Test class.");
+        }
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        TestInterface.Test testObj = new TestInterface.Test();
+        testObj.Display();
+    }
+}
+Đáp án:
+A. Test class.
+B. Lỗi biên dịch
+C. Lỗi thực thi
+D. Không có kết quả đúng
+a
+A. Test class.
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+    int i = 1;
+ 
+    public One()
+    {
+        Console.WriteLine (i);
+    }
+}
+ 
+class Two : One
+{
+    int i = 10;
+ 
+    public void One()
+    {
+        Console.WriteLine (i);
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        One one = new Two();
+    }
+}
+Đáp án:
+A. 1
+B. 10
+C. Lỗi biên dịch
+D. Lỗi thực thi
+a
+A. 1
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+}
+ 
+class Two : One
+{
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        One one = new One();
+        Two two = new Two();
+        Console.WriteLine (one);
+    }
+}
+Đáp án:
+A. true
+B. false
+C. Không có kết quả đúng
+D. Lỗi biên dịch
+c
+C. Không có kết quả đúng
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+    public One()
+    {
+        Console.WriteLine ("One");
+    }
+}
+ 
+class Two : One
+{
+    public Two()
+    {
+        Console.WriteLine ("Two");
+    }
+}
+ 
+class Three
+{
+    Two two = new Two();
+ 
+    public Three()
+    {
+        Console.WriteLine ("Three");
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        Three three = new Three();
+    }
+}
+Đáp án:
+A. Three Two One
+B. Three One Two
+C. One Two Three
+D. Không có kết quả đúng
+c
+C. One Two Three
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class TestInner
+{
+    public void Print()
+    {
+        Console.WriteLine ("Hi");
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        TestInner t = new TestInner();
+ 
+        void Print()
+        {
+            Console.WriteLine ("Hello");
+        }
+ 
+        t.Print();
+    }
+}
+Đáp án:
+A. Hi
+B. Hello
+C. Lỗi biên dịch
+D. Không có kết quả đúng
+a
+A. Hi
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+public class One
+{
+    string className = "One";
+}
+ 
+public class Two : One
+{
+    string className = "Two";
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        One one = new Two();
+        Console.WriteLine (one.className);
+    }
+}
+Đáp án:
+A. One
+B. Two
+C. Lỗi biên dịch
+D. Lỗi thực thi
+c
+C. Lỗi biên dịch
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+    public One()
+    {
+        Console.WriteLine ("One");
+    }
+ 
+    public One (string str)
+    {
+        Console.WriteLine ("OneStr");
+    }
+}
+ 
+class Two : One
+{
+    public Two (string str) : base (str)
+    {
+        Console.WriteLine ("TwoStr");
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        Two two = new Two("Hello");
+    }
+}
+Đáp án:
+A. OneTwoStrOneStr
+B. TwoStrOneStr
+C. OneStrTwoStr
+D. Lỗi biên dịch
+c
+C. OneStrTwoStr
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+public class Test
+{
+    public void DoNothing (Object ob)
+    {
+        Console.WriteLine ("Object");
+    }
+ 
+    public void DoNothing (string str)
+    {
+        Console.WriteLine ("String");
+    }
+ 
+    public static void Main (string[] args)
+    {
+        Test test = new Test();
+        test.DoNothing(args);
+    }
+}
+Đáp án:
+A. String
+B. Object
+C. Không có kết quả đúng
+D. Lỗi biên dịch
+b
+B. Object
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+public class Test
+{
+    public void DoNothing (Object ob)
+    {
+        Console.WriteLine ("Object");
+    }
+ 
+    public void DoNothing (int i)
+    {
+        Console.WriteLine ("Integer");
+    }
+ 
+    public static void Main (string[] args)
+    {
+        Test test = new Test();
+        test.DoNothing(5);
+    }
+}
+Đáp án:
+A. Integer
+B. Object
+C. String
+D. Không có kết quả đúng
+a
+A. Integer
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+public class Test
+{
+    public void DoNothing (Object ob)
+    {
+        Console.WriteLine ("Object");
+    }
+ 
+    public void DoNothing (int i)
+    {
+        Console.WriteLine ("Integer");
+    }
+ 
+    public void DoNothing (double d)
+    {
+        Console.WriteLine ("Double");
+    }
+ 
+    public static void Main (string[] args)
+    {
+        Test test = new Test();
+        test.DoNothing(new Test());
+    }
+}
+Đáp án:
+A. Object
+B. Integer
+C. Double
+D. Lỗi biên dịch
+a
+A. Object
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+public class Test
+{
+    public void DoNothing (Object ob)
+    {
+        Console.WriteLine ("Object");
+    }
+ 
+    public void DoNothing (int i)
+    {
+        Console.WriteLine ("Integer");
+    }
+ 
+    public void DoNothing (double i)
+    {
+        Console.WriteLine ("Integer");
+    }
+ 
+    public static void Main (string[] args)
+    {
+        Test test = new Test();
+        test.DoNothing(test);
+    }
+}
+Đáp án:
+A. Integer
+B. Double
+C. Object
+D. Không có kết quả đúng
+c
+C. Object
+Cho chương trình viết bằng ngôn ngữ C# như sau, Những lựa chọn nào nếu được viết ở dòng // variable name here, khi biên dịch sẽ không có bất kỳ lỗi nào?
+ 
+public class Test
+{
+    private int i = 1;
+    int j = 2;
+ 
+    public void TestMethod()
+    {
+    }
+ 
+    class TestInner
+    {
+        int k = 3;
+        public void InnerMethod (int m)
+        {
+            Console.WriteLine (// variable name here);
+        }
+    }
+}
+Đáp án:
+A. i
+B. i+m
+C. i+j
+D. k+m
+d
+D. k+m
+Cho chương trình viết bằng ngôn ngữ C# như sau, Những lựa chọn nào nếu được viết ở dòng //access variable here khi biên dịch sẽ không có bất kỳ lỗi nào?
+ 
+public class Test
+{
+    int x = 0;
+    static int y = 1;
+ 
+    public class InnerClass
+    {
+        int z = 2;
+        public void GetValue()
+        {
+            //access variable here
+        }
+    }
+}
+Đáp án:
+A. y = z = 6;
+B. y = 8;
+C. z = 9;
+D. Tất cả các trên đều đúng
+d
+D. Tất cả các trên đều đúng
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+public class Test
+{
+    public void TestMethod()
+    {
+        int a = 0;
+ 
+        class TestInner
+        {
+            public void InnerMethod (int x, int y)
+            {
+                Console.WriteLine (y);
+            }
+        }
+ 
+        TestInner inner = new TestInner();
+        inner.InnerMethod(1, 2);
+    }
+ 
+    public static void Main (string[] args)
+    {
+        Test main = new Test();
+        main.TestMethod();
+    }
+}
+Đáp án:
+A. 0
+B. 1
+C. 2
+D. Lỗi biên dịch
+d
+D. Lỗi biên dịch
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+public class Test
+{
+    public void Method1()
+    {
+    }
+ 
+    class TestInner
+    {
+        public int x = 68;
+    }
+ 
+    public void Method2()
+    {
+        TestInner inner = new TestInner();
+        Console.WriteLine(inner.x);
+    }
+ 
+    public static void Main (string[] args)
+    {
+        Test test = new Test();
+        test.Method2();
+    }
+}
+Đáp án:
+A. 68
+B. Lỗi biên dịch
+C. Lỗi thực thi
+D. Cả 3 đáp án đều sai
+a
+A. 68
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+public class Test
+{
+    public class TestInner
+    {
+        public void Print()
+        {
+            Console.WriteLine ("Hi");
+        }
+    }
+ 
+    public void Print()
+    {
+        Console.WriteLine ("Hello");
+    }
+ 
+    public static void Main (string[] args)
+    {
+        TestInner testInner = new TestInner();
+        testInner.Print();
+    }
+}
+Đáp án:
+A. Hello
+B. Hi
+C. Lỗi biên dịch
+D. Lỗi thực thi
+b
+B. Hi
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+abstract class A
+{
+    public int i;
+    public abstract void display();
+}
+ 
+class B : A
+{
+    public int j;
+    public int sum;
+ 
+    public override void display()
+    {
+        sum = i + j;
+        Console.WriteLine (+i + "," + +j + sum);
+    }
+}
+ 
+class Program
+{
+    static void Main (string[] args)
+    {
+        A obj = new B();
+        obj.i = 2;
+ 
+        B obj1 = new B();
+        obj1.j = 10;
+ 
+        obj.display();
+        Console.ReadLine();
+    }
+}
+Đáp án:
+A. 2,1012
+B. 0,1010
+C. 2,02
+D. 0,00
+c
+C. 2,02
+Trong khái niệm Kế thừa(C#), thành viên nào sau đây của lớp kể thừa có thể truy cập được các thành viên của lớp cơ sở?
+Đáp án:
+A. static
+B. protected
+C. private
+D. Không có kết quả đúng
+b
+B. protected
+Cho chương trình viết bằng ngôn ngữ C# như sau, Chọn câu lệnh sẽ được thêm vào đoạn code /* add code here */ để có kết quả là 10 20 ?
+ 
+class BaseClass
+{
+    protected int a = 20;
+}
+ 
+class DerivedClass : BaseClass
+{
+    int a = 10;
+ 
+    public void Math()
+    {
+        /* add code here */
+    }
+}
+ 
+class Program
+{
+    static void Main (string[] args)
+    {
+        DerivedClass obj = new DerivedClass();
+        obj.Math();
+    }
+}
+Đáp án:
+A. Console.WriteLine (a + "," + this.a);
+B. Console.WriteLine (base.a + ", " + this.a);
+C. Console.WriteLine (a + "," + base.a);
+D. Console.WriteLine (base.a + "," + base.a);
+c
+C. Console.WriteLine (a + "," + base.a);
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+interface Calc
+{
+    void Cal (int i);
+}
+ 
+class DisplayA : Calc
+{
+    public int x;
+ 
+    public void Cal (int i)
+    {
+        x = i * i;
+    }
+}
+ 
+class DisplayB : Calc
+{
+    public int x;
+ 
+    public void Cal (int i)
+    {
+        x = i / i;
+    }
+}
+ 
+class Program
+{
+    public static void Main (string[] args)
+    {
+        DisplayA arr1 = new DisplayA();
+        DisplayB arr2 = new DisplayB();
+ 
+        arr1.x = 0;
+        arr2.x = 0;
+ 
+        arr1.Cal(2);
+        arr2.Cal(2);
+ 
+        Console.WriteLine (arr1.x + " " + arr2.x);
+        Console.ReadLine();
+    }
+}
+Đáp án:
+A. 0 0
+B. 2 2
+C. 4 1
+D. 1 4
+c
+C. 4 1
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class Maths
+{
+    public int x;
+    public double y;
+ 
+    public int Add (int a, int b)
+    {
+        x = a + b;
+        return x;
+    }
+ 
+    public int Add (double c, double d)
+    {
+        y = c + d;
+        return  (int)y;
+    }
+ 
+    public Maths()
+    {
+        this. x = 0;
+        this. y = 0;
+    }
+}
+class Program
+{
+    public static void Main (string[] args)
+    {
+        Maths obj = new Maths();
+ 
+        int a = 4;
+        double b = 3.5;
+ 
+        obj.Add(a, a);
+        obj.Add(b, b);
+ 
+        Console.WriteLine (obj.x + " " + obj.y);
+        Console.ReadLine();
+    }
+}
+Đáp án:
+A. 4, 3.5
+B. 8, 0
+C. 7.5, 8
+D. 8, 7
+d
+D. 8, 7
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class Maths
+{
+    public int Fact (int n)
+    {
+        int result;
+ 
+        if (n == 1)
+            return 1;
+ 
+        result = Fact(n - 1) * n;
+        return result;
+    }
+}
+class Program
+{
+    static void Main (string[] args)
+    {
+        Maths obj = new Maths();
+        Console.WriteLine (obj.Fact(4) * obj.Fact(2));
+    }
+}
+Đáp án:
+A. 64
+B. 60
+C. 120
+D. 48
+d
+D. 48
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        Two o = new Two();
+        o.SayHello();
+    }
+}
+ 
+class One
+{
+    public void SayHello()
+    {
+        Console.WriteLine ("Parent Hello");
+    }
+}
+ 
+class Two : One
+{
+    public void SayHello()
+    {
+        Console.WriteLine ("Child Hello");
+    }
+}
+Đáp án:
+A. Parent Hello
+B. Child Hello
+C. Lỗi biên dịch
+D. Lỗi thực thi
+b
+B. Child Hello
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+    public One()
+    {
+        Console.WriteLine ("Hi One,");
+    }
+ 
+    public One (string name)
+    {
+        Console.WriteLine ("Hello" + name + ",");
+    }
+}
+ 
+class Two : One
+{
+    public Two() : this ("Two")
+    {
+        Console.WriteLine ("Hi Two,");
+    }
+ 
+    public Two (string name)
+    {
+        Console.WriteLine ("Hello " + name + ",");
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        Two two = new Two();
+    }
+}
+Đáp án:
+A. Hi One,
+B. Hi Two,
+C. Hi One, Hello Two
+D. Hi One, Hello Two, Hi Two,
+d
+D. Hi One, Hello Two, Hi Two,
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class One
+{
+    public void CallMe()
+    {
+        Console.WriteLine ("Parent");
+    }
+ 
+    public void Caller()
+    {
+        CallMe();
+    }
+}
+ 
+class Two : One
+{
+    public void CallMe()
+    {
+        Console.WriteLine ("Child");
+    }
+}
+ 
+public class Test
+{
+    public static void Main (string[] args)
+    {
+        Two two = new Two();
+        two.CallMe();
+    }
+}
+Đáp án:
+A. Parent
+B. Child
+C. Không có kết quả đúng
+D. Lỗi biên dịch
+b
+B. Child
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class A
+{
+    public int i;
+ 
+    public void display()
+    {
+        Console.WriteLine (i);
+    }
+}
+ 
+class B : A
+{
+    public int j;
+ 
+    public void display()
+    {
+        Console.WriteLine (j);
+    }
+}
+ 
+class Program
+{
+    static void Main (string[] args)
+    {
+        B obj = new B();
+ 
+        obj.i = 1;
+        obj.j = 2;
+ 
+        obj.display();
+        Console.ReadLine();
+    }
+}
+Đáp án:
+A. 0
+B. 2
+C. 1
+D. Lỗi thực thi
+b
+B. 2
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+abstract class A
+{
+    public int i;
+    public abstract void display();
+}
+ 
+class B : A
+{
+    public int j;
+    public int sum;
+ 
+    public override void display()
+    {
+        sum = i + j;
+        Console.WriteLine (+i + ","+ +j +sum);
+    }
+}
+ 
+class Program
+{
+    static void Main (string[] args)
+    {
+        A obj = new B();
+        obj.i = 2;
+ 
+        B obj1 = new B();
+        obj1.j = 10;
+ 
+        obj1.display();
+    }
+}
+Đáp án:
+A. 2,1010
+B. 0,1010
+C. 2,1012
+D. 2,1020
+b
+B. 0,1010
+Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?
+ 
+class Base
+{
+    public void F1()
+    {
+        Console.Write ("F1-Base ");
+    }
+ 
+    public virtual void F2()
+    {
+        Console.Write ("F2-Base ");
+    }
+ 
+    public virtual void F3()
+    {
+        Console.Write ("F3-Base ");
+    }
+}
+ 
+class Derive : Base
+{
+    new public void F1()
+    {
+        Console.Write ("F1-Derive ");
+    }
+ 
+    public override void F2()
+    {
+        Console.Write ("F2-Derive ");
+    }
+ 
+    public void F3()
+    {
+        Console.Write ("F3-Derive ");
+    }
+}
+ 
+class Program
+{
+    static void Main (string[] args)
+    {
+        Base b = new Derive();
+ 
+        b.F1();
+        b.F2();
+        b.F3();
+    }
+}
+Đáp án:
+A. F1-Base
+B. F2-Derive
+C. F3-Base
+D. F1-Base F2-Derive F3-Base
+d
+D. F1-Base F2-Derive F3-Base
